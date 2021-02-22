@@ -5,17 +5,18 @@
 }
 
 :root{
-    --cor-bg-primary: #8C52E5;
-    --cor-bg-secundary: #68DE5A;
-    --cor-bg-light: #F8F8F8;
-    --cor-bg-dark: #000000;
-    --cor-bg-medium: #EAEAEA;
-    --cor-bg-default: #1783E7;
+    --color-bg-primary: #8C52E5;
+    --color-bg-secundary: #68DE5A;
+    --color-bg-light: #F8F8F8;
+    --color-bg-dark: #000000;
+    --color-bg-medium: #EAEAEA;
+    --color-bg-default: #1783E7;
+    --color-font-titles: #1D1D1D;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', 'arial', sans-serif;
+    font-family: 'Roboto';
   }
