@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: Roboto;
+    src: url("./assets/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+:root{
+    --cor-bg-primary: #8C52E5;
+    --cor-bg-secundary: #68DE5A;
+    --cor-bg-light: #F8F8F8;
+    --cor-bg-dark: #000000;
+    --cor-bg-medium: #EAEAEA;
+    --cor-bg-default: #1783E7;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'arial', sans-serif;
+  }
