@@ -1,0 +1,19 @@
+.annuity {
+    background: var(--bg-primary);
+    text-align: center;
+    padding: 1rem;
+}
+
+.annuity__text {
+    color: var(--white);
+}
+
+.annuity__text--weight {
+    font-weight: 700;
+}
+
+.annuity__text--green {
+    color: var(--bg-secundary);
+    font-size: 5rem;
+    margin: 0;
+}
