@@ -21,6 +21,10 @@
     margin-top: 1rem;
 }
 
+.form__validation {
+    font-size: 0.9rem;
+}
+
 .form__button {
     align-items: center;
     background-color: var(--bg-primary);

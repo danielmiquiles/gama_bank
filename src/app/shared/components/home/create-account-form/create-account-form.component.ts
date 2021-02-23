@@ -14,11 +14,11 @@ export class CreateAccountFormComponent implements OnInit {
   @ViewChild('passwordInput') passwordInput!: ElementRef;
   @ViewChild('confirmPasswordInput') confirmPasswordInput!: ElementRef;
 
-  cpf!: string;
-  username!: string;
-  namecomplete!: string;
-  password!: string;
-  confirmpassword!: string;
+  cpf: string;
+  username: string;
+  namecomplete: string;
+  password: string;
+  confirmpassword: string;
 
   constructor() { }
 

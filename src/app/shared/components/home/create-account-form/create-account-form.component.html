@@ -6,58 +6,58 @@
         <label for="cpfInput">Digite seu CPF</label>
         <input 
         type="text"
-        [(ngModel)]="cpf" required cpf
+        [(ngModel)]="cpf" required name="cpf"
         #cpfInput>
         <span class="highlight"></span>
         <span class="bar"></span>
-        <p *ngIf="exibeErro('cpf', form)">CPf inválido</p>
+        <p *ngIf="exibeErro('cpf', form)" class="form__validation">CPf inválido</p>
     </div>
     
     <div class="form__inputs">
         <label for="cpfInput">Escolha um nome de usuário</label>
         <input 
         type="text"
-        [(ngModel)]="username" required userName 
+        [(ngModel)]="username" required name="userName"
         #userNameInput
         >
         <span class="highlight"></span>
         <span class="bar"></span>
-        <p *ngIf="exibeErro('userName', form)">Nome de usuário inválido</p>
+        <p *ngIf="exibeErro('userName', form)" class="form__validation">Nome de usuário inválido</p>
     </div>
 
     <div class="form__inputs">
         <label for="cpfInput">Nome completo</label>
         <input 
         type="text"
-        [(ngModel)]="namecomplete" required nameComplete
+        [(ngModel)]="namecomplete" required name="nameComplete"
         #nameCompleteInput
         >
         <span class="highlight"></span>
         <span class="bar"></span>
-        <p *ngIf="exibeErro('nameComplete', form)">Nome completo inválido</p>
+        <p *ngIf="exibeErro('nameComplete', form)" class="form__validation">Nome completo inválido</p>
     </div>
 
     <div class="form__inputs">
         <label for="cpfInput">Digite sua senha</label>
         <input 
         type="password"
-        [(ngModel)]="password" required password
+        [(ngModel)]="password" required name="password"
         #passwordInput
         >
         <span class="highlight"></span>
         <span class="bar"></span>   
-        <p *ngIf="exibeErro('password', form)">Senha inválida</p>
+        <p *ngIf="exibeErro('password', form)" class="form__validation">Senha inválida</p>
     </div>
 
     <div class="form__inputs">
         <label for="cpfInput">Confirmar senha</label>
         <input type="password"
-        [(ngModel)]="confirmpassword" required confirmPassword
+        [(ngModel)]="confirmpassword" required name="confirmPassword"
         #confirmPasswordInput
         >
         <span class="highlight"></span>
         <span class="bar"></span>
-        <p *ngIf="exibeErro('confirmPassword', form)">As senhas não são compatíveis</p>
+        <p *ngIf="exibeErro('confirmPassword', form)" class="form__validation">As senhas não são compatíveis</p>
     </div>
 
     <button type="submit" [disabled]="form.invalid" class="form__button">Continuar
