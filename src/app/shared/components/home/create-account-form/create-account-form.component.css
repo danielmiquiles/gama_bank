@@ -23,6 +23,7 @@
 
 .form__validation {
     font-size: 0.9rem;
+    color: var(--red);
 }
 
 .form__button {
