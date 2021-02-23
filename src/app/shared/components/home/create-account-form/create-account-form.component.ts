@@ -33,32 +33,28 @@ export class CreateAccountFormComponent implements OnInit {
       form.controls.password.markAsTouched();
       form.controls.confirmPassword.markAsTouched();
 
-      if (form.controls.cpf.invalid) {
-        this.cpfInput.nativeElement.focus();
-        return;
-      }
+      switch (form.controls.invalid) {
 
-      if (form.controls.userName.invalid) {
-        this.userNameInput.nativeElement.focus();
-        return;
-      }
+        case form.controls.cpf.invalid:
+          this.cpfInput.nativeElement.focus();
+          break;
 
-      if (form.controls.nameComplete.invalid) {
-        this.nameCompleteInput.nativeElement.focus();
-        return;
-      }
+        case form.controls.userName.invalid:
+          this.cpfInput.nativeElement.focus();
+          break;
 
-      if (form.controls.password.invalid) {
-        this.passwordInput.nativeElement.focus();
-        return;
-      }
+        case form.controls.nameComplete.invalid:
+          this.nameCompleteInput.nativeElement.focus();
+          break;
 
-      if (form.controls.confirmPassword.invalid) {
-        this.confirmPasswordInput.nativeElement.focus();
-        return;
-      }
+        case form.controls.password.invalid:
+          this.passwordInput.nativeElement.focus();
+          break;
 
-      return;
+        case form.controls.confirmPassword.invalid:
+          this.confirmPasswordInput.nativeElement.focus();
+          break;
+      }
     }
   }
 
