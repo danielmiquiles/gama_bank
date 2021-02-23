@@ -9,9 +9,11 @@ import { ComplexityComponent } from './components/home/complexity/complexity.com
 import { CreateAccountComponent } from './components/home/create-account/create-account.component';
 import { CreditCardComponent } from './components/home/credit-card/credit-card.component';
 import { SimpleLifeComponent } from './components/home/simple-life/simple-life.component';
+import { CompleteNameComponent } from './components/inputs/complete-name/complete-name.component';
+import { ConfirmPasswordComponent } from './components/inputs/confirm-password/confirm-password.component';
 import { InputCpfComponent } from './components/inputs/input-cpf/input-cpf.component';
-import { UserNameComponent } from './components/inputs/user-name/user-name.component';
 import { PasswordComponent } from './components/inputs/password/password.component';
+import { UserNameComponent } from './components/inputs/user-name/user-name.component';
 
 
 @NgModule({
@@ -26,6 +28,8 @@ import { PasswordComponent } from './components/inputs/password/password.compone
     InputCpfComponent,
     UserNameComponent,
     PasswordComponent,
+    CompleteNameComponent,
+    ConfirmPasswordComponent,
   ],
   imports: [
     CommonModule,
@@ -39,7 +43,11 @@ import { PasswordComponent } from './components/inputs/password/password.compone
     AnnuityComponent,
     ComplexityComponent,
     SimpleLifeComponent,
-    InputCpfComponent
+    InputCpfComponent,
+    UserNameComponent,
+    PasswordComponent,
+    CompleteNameComponent,
+    ConfirmPasswordComponent,
   ]
 })
 export class SharedModule { }
