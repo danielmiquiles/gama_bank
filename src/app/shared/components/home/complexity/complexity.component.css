@@ -1,0 +1,10 @@
+.complexity {
+    background: url(../../../../../assets/img/guys.png) var(--bg-secundary);
+    color: var(--white);
+    padding: 1rem;
+    text-align: center;
+}
+
+.complexity__title {
+    font-weight: 700;
+}
