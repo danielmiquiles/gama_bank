@@ -30,14 +30,14 @@
     align-items: center;
     background-color: var(--bg-primary);
     border: none;
-    border-radius: 20px;
+    border-radius: 25px;
     color: var(--white);
     cursor: pointer;
     display: flex;
     font-size: 1.2rem;
     justify-content: space-between;
     margin-top: 2rem;
-    padding: 1rem;
+    padding: 1.2rem;
     width: 100%;
     transition: all .5s ease-out;
 }
