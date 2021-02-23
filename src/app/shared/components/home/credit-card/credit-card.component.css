@@ -10,6 +10,11 @@
     height: auto;
 }
 
+.account__details-img {
+    width: 100%;
+    margin-left: -15px;
+}
+
 .account__details,
 .account__credit {
     padding: 1rem;
@@ -27,10 +32,11 @@
     font-weight: 400;
 }
 
-.account__details-text, .account__credit-text {
-    font-size: 1.3rem;
-}
-
 .account__credit {
     background: var(--white);
+}
+
+.account__credit-img {
+    margin-top: 5%;
+    width: 100%;
 }
