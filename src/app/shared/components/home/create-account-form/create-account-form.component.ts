@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-create-account-form',
@@ -7,9 +8,64 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateAccountFormComponent implements OnInit {
 
+  @ViewChild('cpfInput') cpfInput!: ElementRef;
+  @ViewChild('userNameInput') userNameInput!: ElementRef;
+  @ViewChild('nameCompleteInput') nameCompleteInput!: ElementRef;
+  @ViewChild('passwordInput') passwordInput!: ElementRef;
+  @ViewChild('confirmPasswordInput') confirmPasswordInput!: ElementRef;
+
+  cpf!: string;
+  username!: string;
+  namecomplete!: string;
+  password!: string;
+  confirmpassword!: string;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onSubmit(form): void {
+    if (!form.valid) {
+      form.controls.cpf.markAsTouched();
+      form.controls.userName.markAsTouched();
+      form.controls.nameComplete.markAsTouched();
+      form.controls.password.markAsTouched();
+      form.controls.confirmPassword.markAsTouched();
+
+      if (form.controls.cpf.invalid) {
+        this.cpfInput.nativeElement.focus();
+        return;
+      }
+
+      if (form.controls.userName.invalid) {
+        this.userNameInput.nativeElement.focus();
+        return;
+      }
+
+      if (form.controls.nameComplete.invalid) {
+        this.nameCompleteInput.nativeElement.focus();
+        return;
+      }
+
+      if (form.controls.password.invalid) {
+        this.passwordInput.nativeElement.focus();
+        return;
+      }
+
+      if (form.controls.confirmPassword.invalid) {
+        this.confirmPasswordInput.nativeElement.focus();
+        return;
+      }
+
+      return;
+    }
+  }
+
+  exibeErro(nomeControle: string, form: NgForm): boolean {
+    if(!form.controls[nomeControle]) {
+      return false;
+    }
+    return form.controls[nomeControle].invalid && form.controls[nomeControle].touched;
+  }
 }

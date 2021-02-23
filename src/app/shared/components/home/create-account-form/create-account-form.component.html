@@ -1,43 +1,66 @@
-<form class="form">
+<form class="form" #form="ngForm" (ngSubmit)="onSubmit(form)">
     <header class="form__header">
         <h3>Peça sua conta e cartão de crédito do Gama Bank</h3>
     </header>
     <div class="form__inputs">
         <label for="cpfInput">Digite seu CPF</label>
-        <input type="text">
+        <input 
+        type="text"
+        [(ngModel)]="cpf" required cpf
+        #cpfInput>
         <span class="highlight"></span>
         <span class="bar"></span>
+        <p *ngIf="exibeErro('cpf', form)">CPf inválido</p>
     </div>
     
     <div class="form__inputs">
         <label for="cpfInput">Escolha um nome de usuário</label>
-        <input type="text">
+        <input 
+        type="text"
+        [(ngModel)]="username" required userName 
+        #userNameInput
+        >
         <span class="highlight"></span>
         <span class="bar"></span>
+        <p *ngIf="exibeErro('userName', form)">Nome de usuário inválido</p>
     </div>
 
     <div class="form__inputs">
         <label for="cpfInput">Nome completo</label>
-        <input type="text">
+        <input 
+        type="text"
+        [(ngModel)]="namecomplete" required nameComplete
+        #nameCompleteInput
+        >
         <span class="highlight"></span>
         <span class="bar"></span>
+        <p *ngIf="exibeErro('nameComplete', form)">Nome completo inválido</p>
     </div>
 
     <div class="form__inputs">
         <label for="cpfInput">Digite sua senha</label>
-        <input type="password">
+        <input 
+        type="password"
+        [(ngModel)]="password" required password
+        #passwordInput
+        >
         <span class="highlight"></span>
         <span class="bar"></span>   
+        <p *ngIf="exibeErro('password', form)">Senha inválida</p>
     </div>
 
     <div class="form__inputs">
         <label for="cpfInput">Confirmar senha</label>
-        <input type="password">
+        <input type="password"
+        [(ngModel)]="confirmpassword" required confirmPassword
+        #confirmPasswordInput
+        >
         <span class="highlight"></span>
         <span class="bar"></span>
+        <p *ngIf="exibeErro('confirmPassword', form)">As senhas não são compatíveis</p>
     </div>
 
-    <button type="submit" [disabled] class="form__button">Continuar
+    <button type="submit" [disabled]="form.invalid" class="form__button">Continuar
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>    
     </button>

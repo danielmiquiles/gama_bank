@@ -40,3 +40,7 @@
 .form__button:hover {
     background-color: var(--bg-primary-dark);
 }
+
+.ng-invalid.ng-touched {
+    border-color: var(--red);
+}
