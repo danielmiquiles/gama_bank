@@ -17,3 +17,13 @@
     font-size: 5rem;
     margin: 0;
 }
+
+@media screen and (min-width: 768px) {
+    
+    .annuity {
+        display: flex;
+        justify-content: space-around;
+        text-align: initial;
+        padding: 5rem;
+    }
+}

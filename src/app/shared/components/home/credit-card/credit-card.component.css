@@ -40,3 +40,33 @@
     margin-top: 5%;
     width: 100%;
 }
+
+@media screen and (min-width: 768px) {
+    .account {
+        display: flex;
+    }
+
+    .account__details-img, 
+    .account__credit-img {
+        width: 84%;
+        margin-top: 6rem;
+    }
+
+    .account__details-text, 
+    .account__credit-text {
+        text-align: left;
+        width: 50%;
+    }
+
+    .account__credit-tex {
+        margin-top: 3rem;
+    }
+
+    .account__credit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}

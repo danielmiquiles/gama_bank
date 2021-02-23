@@ -8,3 +8,14 @@
 .complexity__title {
     font-weight: 700;
 }
+
+@media screen and (min-width: 768px) {
+    .complexity {
+        padding: 9rem;
+        text-align: left;
+    }
+
+    .complexity__text {
+        width: 50%;
+    }
+}

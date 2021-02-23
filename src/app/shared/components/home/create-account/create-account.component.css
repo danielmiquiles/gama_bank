@@ -71,3 +71,22 @@
 .form__button:hover {
     background-color: var(--bg-primary-dark);
 }
+
+@media screen and (min-width: 768px) {
+    .home {
+        padding: 2rem;
+    }
+
+    .home__img {
+        display: none;
+    }
+
+    .home__create-account {
+        display: flex;
+        align-items: baseline;
+    }
+    
+    .home__presentation {
+        text-align: left;
+    }
+}
