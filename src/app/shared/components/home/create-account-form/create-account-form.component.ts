@@ -59,7 +59,7 @@ export class CreateAccountFormComponent implements OnInit {
   }
 
   exibeErro(nomeControle: string, form: NgForm): boolean {
-    if(!form.controls[nomeControle]) {
+    if (!form.controls[nomeControle]) {
       return false;
     }
     return form.controls[nomeControle].invalid && form.controls[nomeControle].touched;
