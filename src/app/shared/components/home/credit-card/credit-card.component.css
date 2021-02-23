@@ -1,4 +1,19 @@
+.account {
+    padding: 1rem;
+}
+
 .account__details {
     color: var(--bg-secundary);
     background: var(--black);
+    /* background: url(../../../../../assets/img/app-bg1.png) left  no-repeat ; */
+    height: auto;
+    padding: 1rem;
+}
+
+.account__details-title, .account__details-text {
+    text-align: center;
+}
+
+.account__details-text {
+    font-size: 1.5rem;
 }
