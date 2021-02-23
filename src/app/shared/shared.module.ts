@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { ButtonsComponent } from './components/buttons/buttons.component';
-import { AccountComponent } from './components/home/account/account.component';
 import { AnnuityComponent } from './components/home/annuity/annuity.component';
 import { ComplexityComponent } from './components/home/complexity/complexity.component';
 import { CreateAccountFormComponent } from './components/home/create-account-form/create-account-form.component';
@@ -22,7 +21,6 @@ import { UserNameComponent } from './components/inputs/user-name/user-name.compo
     ButtonsComponent,
     CreateAccountComponent,
     CreateAccountFormComponent,
-    AccountComponent,
     CreditCardComponent,
     AnnuityComponent,
     ComplexityComponent,
@@ -40,7 +38,6 @@ import { UserNameComponent } from './components/inputs/user-name/user-name.compo
   exports: [
     ButtonsComponent,
     CreateAccountComponent,
-    AccountComponent,
     CreditCardComponent,
     AnnuityComponent,
     ComplexityComponent,
