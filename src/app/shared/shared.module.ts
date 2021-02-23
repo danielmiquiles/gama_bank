@@ -9,11 +9,6 @@ import { CreateAccountFormComponent } from './components/home/create-account-for
 import { CreateAccountComponent } from './components/home/create-account/create-account.component';
 import { CreditCardComponent } from './components/home/credit-card/credit-card.component';
 import { SimpleLifeComponent } from './components/home/simple-life/simple-life.component';
-import { CompleteNameComponent } from './components/inputs/complete-name/complete-name.component';
-import { ConfirmPasswordComponent } from './components/inputs/confirm-password/confirm-password.component';
-import { InputCpfComponent } from './components/inputs/input-cpf/input-cpf.component';
-import { PasswordComponent } from './components/inputs/password/password.component';
-import { UserNameComponent } from './components/inputs/user-name/user-name.component';
 
 
 @NgModule({
@@ -25,11 +20,6 @@ import { UserNameComponent } from './components/inputs/user-name/user-name.compo
     AnnuityComponent,
     ComplexityComponent,
     SimpleLifeComponent,
-    InputCpfComponent,
-    UserNameComponent,
-    PasswordComponent,
-    CompleteNameComponent,
-    ConfirmPasswordComponent,
   ],
   imports: [
     CommonModule,
@@ -42,11 +32,6 @@ import { UserNameComponent } from './components/inputs/user-name/user-name.compo
     AnnuityComponent,
     ComplexityComponent,
     SimpleLifeComponent,
-    InputCpfComponent,
-    UserNameComponent,
-    PasswordComponent,
-    CompleteNameComponent,
-    ConfirmPasswordComponent,
     CreateAccountFormComponent
   ]
 })
