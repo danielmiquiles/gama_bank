@@ -9,19 +9,23 @@ import { ComplexityComponent } from './components/home/complexity/complexity.com
 import { CreateAccountComponent } from './components/home/create-account/create-account.component';
 import { CreditCardComponent } from './components/home/credit-card/credit-card.component';
 import { SimpleLifeComponent } from './components/home/simple-life/simple-life.component';
-import { InputsComponent } from './components/inputs/inputs.component';
+import { InputCpfComponent } from './components/inputs/input-cpf/input-cpf.component';
+import { UserNameComponent } from './components/inputs/user-name/user-name.component';
+import { PasswordComponent } from './components/inputs/password/password.component';
 
 
 @NgModule({
   declarations: [
     ButtonsComponent,
-    InputsComponent,
     CreateAccountComponent,
     AccountComponent,
     CreditCardComponent,
     AnnuityComponent,
     ComplexityComponent,
-    SimpleLifeComponent
+    SimpleLifeComponent,
+    InputCpfComponent,
+    UserNameComponent,
+    PasswordComponent,
   ],
   imports: [
     CommonModule,
@@ -29,13 +33,13 @@ import { InputsComponent } from './components/inputs/inputs.component';
   ],
   exports: [
     ButtonsComponent,
-    InputsComponent,
     CreateAccountComponent,
     AccountComponent,
     CreditCardComponent,
     AnnuityComponent,
     ComplexityComponent,
-    SimpleLifeComponent
+    SimpleLifeComponent,
+    InputCpfComponent
   ]
 })
 export class SharedModule { }
