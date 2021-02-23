@@ -49,3 +49,7 @@
 .ng-invalid.ng-touched {
     border-color: var(--red);
 }
+
+.form__button--disabled:disabled {
+    background-color: var(--button-disabled);
+}
