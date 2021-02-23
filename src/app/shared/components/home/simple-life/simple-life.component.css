@@ -1,0 +1,19 @@
+.simple {
+    background-color: var(--bg-medium);
+    height: auto;
+    text-align: center;
+    padding: 1rem;
+}
+
+.simple__texts--weight {
+    font-weight: 700;
+}
+
+.simple__texts--address {
+    font-size: 0.7rem;
+}
+
+.simple__img {
+    margin-top: 5%;
+    width: 70%;
+}
