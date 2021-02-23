@@ -6,6 +6,7 @@ import { ButtonsComponent } from './components/buttons/buttons.component';
 import { AccountComponent } from './components/home/account/account.component';
 import { AnnuityComponent } from './components/home/annuity/annuity.component';
 import { ComplexityComponent } from './components/home/complexity/complexity.component';
+import { CreateAccountFormComponent } from './components/home/create-account-form/create-account-form.component';
 import { CreateAccountComponent } from './components/home/create-account/create-account.component';
 import { CreditCardComponent } from './components/home/credit-card/credit-card.component';
 import { SimpleLifeComponent } from './components/home/simple-life/simple-life.component';
@@ -20,6 +21,7 @@ import { UserNameComponent } from './components/inputs/user-name/user-name.compo
   declarations: [
     ButtonsComponent,
     CreateAccountComponent,
+    CreateAccountFormComponent,
     AccountComponent,
     CreditCardComponent,
     AnnuityComponent,
@@ -33,7 +35,7 @@ import { UserNameComponent } from './components/inputs/user-name/user-name.compo
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
   ],
   exports: [
     ButtonsComponent,
@@ -48,6 +50,7 @@ import { UserNameComponent } from './components/inputs/user-name/user-name.compo
     PasswordComponent,
     CompleteNameComponent,
     ConfirmPasswordComponent,
+    CreateAccountFormComponent
   ]
 })
 export class SharedModule { }
