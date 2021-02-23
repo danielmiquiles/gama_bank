@@ -25,8 +25,8 @@
     background-color: var(--white);
     color: var(--bg-primary);
     height: 15vh;
-    padding: 1rem;
-    border-radius: 20px;
+    padding: 0.6rem;
+    border-radius: 15px;
 }
 
 .form {
@@ -77,6 +77,10 @@
         padding: 2rem;
     }
 
+    .home__header {
+        justify-content: flex-start;
+    }
+
     .home__img {
         display: none;
     }
@@ -88,5 +92,28 @@
     
     .home__presentation {
         text-align: left;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .home {
+        background: url(../../../../../assets/img/happyhappy.png) no-repeat center 9rem var(--bg-primary);
+    }
+
+    .home__presentation {
+        height: auto;
+        margin-left: 6rem;
+        width: 20%;
+    }
+
+    .home__link {
+        margin-top: 3rem;
+        padding-right: 8rem;
+    }
+
+    .home__create-account {
+        align-items: center;
+        justify-content: space-between;
     }
 }

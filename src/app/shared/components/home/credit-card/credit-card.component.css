@@ -67,6 +67,15 @@
         flex-direction: column;
         align-items: center;
     }
+}
 
+@media screen and (min-width: 1200px) {
 
+    .account {
+        justify-content: center;
+    }
+
+    .account__credit-img {
+        width: 60%;
+    }
 }

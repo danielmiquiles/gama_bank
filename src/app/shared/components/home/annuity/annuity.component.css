@@ -27,3 +27,19 @@
         padding: 5rem;
     }
 }
+
+@media screen and (min-width: 1200px) {
+
+    .annuity {
+        padding: 20rem;
+        align-items: center;
+    }
+
+    .annuity__text {
+        width: 45%;
+    }
+
+    .annuity__text--green {
+        font-size: 8rem;
+    }
+}
