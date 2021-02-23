@@ -1,0 +1,35 @@
+.form {
+    background-color: var(--white);
+    border-radius: 8px;
+    color:var(--black);
+    height: auto;
+    margin-top: 10%;
+    padding: 1rem;
+}
+
+.form__header {
+    text-align: left;
+}
+
+.form__header h3 {
+    font-weight: 500;
+}
+
+.form__button {
+    align-items: center;
+    background-color: var(--bg-primary);
+    border: none;
+    border-radius: 20px;
+    color: var(--white);
+    cursor: pointer;
+    display: flex;
+    font-size: 1.2rem;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 100%;
+    transition: all .5s ease-out;
+}
+
+.form__button:hover {
+    background-color: var(--bg-primary-dark);
+}

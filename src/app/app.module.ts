@@ -4,20 +4,17 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { ButtonsComponent } from './shared/components/buttons/buttons.component';
-import { InputsComponent } from './shared/components/inputs/inputs.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ComponentsComponent,
-    InputsComponent,
-    ButtonsComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule
+    RouterModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
