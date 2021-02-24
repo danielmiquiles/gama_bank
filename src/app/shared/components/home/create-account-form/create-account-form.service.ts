@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { User } from 'src/app/shared/interfaces/user.interface';
 import { environment } from 'src/environments/environment';
-
-import { CreateAccount } from './create-account.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +14,7 @@ export class CreateAccountFormService {
     private http: HttpClient
   ) { }
 
-  // tslint:disable-next-line:typedef
-  createUser(newUser: CreateAccount) {
-    return this.http.post<CreateAccount>(this.API_URL, newUser);
+  createUser(user: User) {
+    return this.http.post<User>(`${this.API_URL}/usuarios`, user);
   }
 }

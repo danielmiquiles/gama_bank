@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { ButtonsComponent } from './components/buttons/buttons.component';
+import { HomeComponent } from '../home/home.component';
 import { AnnuityComponent } from './components/home/annuity/annuity.component';
 import { ComplexityComponent } from './components/home/complexity/complexity.component';
 import { CreateAccountFormComponent } from './components/home/create-account-form/create-account-form.component';
@@ -12,9 +12,9 @@ import { CreditCardComponent } from './components/home/credit-card/credit-card.c
 import { SimpleLifeComponent } from './components/home/simple-life/simple-life.component';
 
 
+
 @NgModule({
   declarations: [
-    ButtonsComponent,
     CreateAccountComponent,
     CreateAccountFormComponent,
     CreditCardComponent,
@@ -24,11 +24,10 @@ import { SimpleLifeComponent } from './components/home/simple-life/simple-life.c
   ],
   imports: [
     CommonModule,
-    RouterModule,
-    FormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot([ { path:'', component: HomeComponent } ])
   ],
   exports: [
-    ButtonsComponent,
     CreateAccountComponent,
     CreditCardComponent,
     AnnuityComponent,

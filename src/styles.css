@@ -21,9 +21,10 @@
     --bg-dark: #000000;
     --bg-medium: #EAEAEA;
     --bg-default: #1783E7;
+    --button-disabled: #D8D8D8;
     --white: #FFFFFF;
     --black: #000000;
-    --red: #FF000000;
+    --red: #FF0000;
 }
 
 h1, h2, h3, h4, h5, h6 {

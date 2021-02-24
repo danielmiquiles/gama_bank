@@ -1,4 +1,4 @@
-export interface CreateAccount  {
+export interface User  {
     cpf: string;
     login: string;
     nome: string;
