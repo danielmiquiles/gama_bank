@@ -15,7 +15,6 @@ export class CreateAccountFormService {
     private http: HttpClient
   ) { }
 
-  // tslint:disable-next-line:typedef
   createUser(newUser: CreateAccount) {
     return this.http.post<CreateAccount>(this.API_URL, newUser);
   }

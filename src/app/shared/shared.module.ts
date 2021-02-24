@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { ButtonsComponent } from './components/buttons/buttons.component';
@@ -25,7 +25,7 @@ import { SimpleLifeComponent } from './components/home/simple-life/simple-life.c
   imports: [
     CommonModule,
     RouterModule,
-    FormsModule
+    ReactiveFormsModule,
   ],
   exports: [
     ButtonsComponent,

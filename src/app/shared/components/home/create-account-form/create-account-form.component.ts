@@ -1,5 +1,5 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-create-account-form',
@@ -8,60 +8,40 @@ import { NgForm } from '@angular/forms';
 })
 export class CreateAccountFormComponent implements OnInit {
 
-  @ViewChild('cpfInput') cpfInput!: ElementRef;
-  @ViewChild('userNameInput') userNameInput!: ElementRef;
-  @ViewChild('nameCompleteInput') nameCompleteInput!: ElementRef;
-  @ViewChild('passwordInput') passwordInput!: ElementRef;
-  @ViewChild('confirmPasswordInput') confirmPasswordInput!: ElementRef;
-
-  cpf: string;
-  username: string;
-  namecomplete: string;
-  password: string;
-  confirmpassword: string;
-
-  constructor() { }
+  userForm: FormGroup;
+  
+  constructor(
+    private formBuilder: FormBuilder,
+  ) { }
 
   ngOnInit(): void {
+    this.userForm = this.formBuilder.group({
+      cpf: ['', Validators.required],
+      userName: ['', Validators.required],
+      fullName: ['', Validators.required],
+      password: ['', Validators.required],
+      confirmPassword: ['', Validators.required],
+    })
   }
 
-  onSubmit(form): void {
-    if (!form.valid) {
-      form.controls.cpf.markAsTouched();
-      form.controls.userName.markAsTouched();
-      form.controls.nameComplete.markAsTouched();
-      form.controls.password.markAsTouched();
-      form.controls.confirmPassword.markAsTouched();
+  validateAllFormFields() {
+    Object.keys(this.userForm.controls).forEach(field => {
+      const control = this.userForm.get(field);
+      control.markAsTouched();
+    })
+  }
 
-      switch (form.controls.invalid) {
-
-        case form.controls.cpf.invalid:
-          this.cpfInput.nativeElement.focus();
-          break;
-
-        case form.controls.userName.invalid:
-          this.cpfInput.nativeElement.focus();
-          break;
-
-        case form.controls.nameComplete.invalid:
-          this.nameCompleteInput.nativeElement.focus();
-          break;
-
-        case form.controls.password.invalid:
-          this.passwordInput.nativeElement.focus();
-          break;
-
-        case form.controls.confirmPassword.invalid:
-          this.confirmPasswordInput.nativeElement.focus();
-          break;
-      }
+  onSubmit() {
+    if (this.userForm.invalid) {
+      this.validateAllFormFields();
+      return;
     }
   }
 
-  exibeErro(nomeControle: string, form: NgForm): boolean {
-    if (!form.controls[nomeControle]) {
+  exibeErro(nomeControle: string) {
+    if (!this.userForm.get(nomeControle)) {
       return false;
     }
-    return form.controls[nomeControle].invalid && form.controls[nomeControle].touched;
+    return this.userForm.get(nomeControle).invalid && this.userForm.get(nomeControle).touched;
   }
 }
