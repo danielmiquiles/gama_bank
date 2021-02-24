@@ -1,0 +1,23 @@
+.dash{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.dash__nav{
+    order: 2;
+    background-color: var(--bg-secundary);
+    height: 20vh;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    color:#ffffff;
+    text-align: center;
+    padding: 2rem;
+}
+
+.dash__main{
+    min-height: 125vh;
+    background-color: var(--bg-primary);
+    padding: 5rem 2rem;
+}
