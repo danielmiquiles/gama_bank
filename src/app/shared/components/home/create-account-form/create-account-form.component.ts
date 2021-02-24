@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { User } from 'src/app/shared/interfaces/user.interface';
 
 import { CreateAccountFormService } from './create-account-form.service';
 
@@ -41,7 +42,8 @@ export class CreateAccountFormComponent implements OnInit {
       this.validateAllFormFields();
       return;
     }
-    console.log(this.userForm.value)
+    // console.log(this.userForm.value)
+    this.createUser();
   }
 
   exibeErro(nomeControle: string) {
@@ -52,20 +54,25 @@ export class CreateAccountFormComponent implements OnInit {
   }
 
   createUser() {
-    this.createAccountService.createUser(this.userForm.value)
+    const user = {
+      "login": this.userForm.value.userName, 
+      "cpf": this.userForm.value.cpf, 
+      "senha": this.userForm.value.password, 
+      "nome": this.userForm.value.fullName
+    }    
+    this.createAccountService.createUser(user)
     .subscribe(
-      response => this.onSuccess(),
-      error => this.onError()
-      )
-      console.log('passei aqui')
+      response => this.onSuccess(response),
+      error => this.onError(error)
+      )      
   }
 
-  onSuccess() {
-    this.router.navigate(['exemplo'])
-    console.log('sucesso')
+  onSuccess(response: User) {
+    // this.router.navigate(['exemplo'])
+    console.log(response)
   }
 
-  onError() {
-    console.error('error');
+  onError(error: any) {
+    console.error(error);
   }
 }
