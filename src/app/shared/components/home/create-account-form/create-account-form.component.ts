@@ -36,6 +36,7 @@ export class CreateAccountFormComponent implements OnInit {
       this.validateAllFormFields();
       return;
     }
+    console.log(this.userForm.value)
   }
 
   exibeErro(nomeControle: string) {
