@@ -52,6 +52,12 @@ export class CreateAccountFormComponent implements OnInit {
   }
 
   createUser() {
+    const user = {
+      "nome": this.userForm.value.fullName,
+      "login": this.userForm.value.userName,
+      "cpf": this.userForm.value.cpf,
+      "senha": this.userForm.value.password,
+    }
     this.createAccountService.createUser(this.userForm.value)
     .subscribe(
       response => this.onSuccess(),
@@ -61,7 +67,7 @@ export class CreateAccountFormComponent implements OnInit {
   }
 
   onSuccess() {
-    this.router.navigate(['exemplo'])
+    // this.router.navigate(['exemplo'])
     console.log('sucesso')
   }
 

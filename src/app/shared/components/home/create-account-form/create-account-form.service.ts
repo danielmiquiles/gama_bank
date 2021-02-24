@@ -15,6 +15,6 @@ export class CreateAccountFormService {
   ) { }
 
   createUser(user: User) {
-    return this.http.post<User>(this.API_URL, user);
+    return this.http.post<User>(`${this.API_URL}/usuarios`, user);
   }
 }
