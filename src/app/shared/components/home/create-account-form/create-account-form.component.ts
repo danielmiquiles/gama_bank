@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { User } from 'src/app/shared/interfaces/user.interface';
 
 import { CreateAccountFormService } from './create-account-form.service';
 
@@ -12,6 +13,7 @@ import { CreateAccountFormService } from './create-account-form.service';
 export class CreateAccountFormComponent implements OnInit {
 
   userForm: FormGroup;
+  user: User;
   
   constructor(
     private formBuilder: FormBuilder,
@@ -41,6 +43,7 @@ export class CreateAccountFormComponent implements OnInit {
       this.validateAllFormFields();
       return;
     }
+    this.createUser();
     console.log(this.userForm.value)
   }
 
@@ -58,20 +61,19 @@ export class CreateAccountFormComponent implements OnInit {
       "cpf": this.userForm.value.cpf,
       "senha": this.userForm.value.password,
     }
-    this.createAccountService.createUser(this.userForm.value)
+    this.createAccountService.createUser(user)
     .subscribe(
       response => this.onSuccess(),
-      error => this.onError()
+      error => this.onError(error)
       )
       console.log('passei aqui')
   }
 
   onSuccess() {
-    // this.router.navigate(['exemplo'])
-    console.log('sucesso')
+    console.log('criei')
   }
 
-  onError() {
-    console.error('error');
+  onError(error: any) {
+    console.error(error);
   }
 }
