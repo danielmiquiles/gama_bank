@@ -53,14 +53,16 @@ export class CreateAccountFormComponent implements OnInit {
 
   createUser() {
     this.createAccountService.createUser(this.userForm.value)
-      .subscribe(
-        response => this.onSuccess(),
-        error => this.onError()
+    .subscribe(
+      response => this.onSuccess(),
+      error => this.onError()
       )
+      console.log('passei aqui')
   }
 
   onSuccess() {
     this.router.navigate(['exemplo'])
+    console.log('sucesso')
   }
 
   onError() {
