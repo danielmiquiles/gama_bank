@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
+import { CreateAccountFormService } from './create-account-form.service';
 
 @Component({
   selector: 'app-create-account-form',
@@ -12,6 +15,8 @@ export class CreateAccountFormComponent implements OnInit {
   
   constructor(
     private formBuilder: FormBuilder,
+    private router: Router,
+    private createAccountService:  CreateAccountFormService
   ) { }
 
   ngOnInit(): void {
@@ -44,5 +49,21 @@ export class CreateAccountFormComponent implements OnInit {
       return false;
     }
     return this.userForm.get(nomeControle).invalid && this.userForm.get(nomeControle).touched;
+  }
+
+  createUser() {
+    this.createAccountService.createUser(this.userForm.value)
+      .subscribe(
+        response => this.onSuccess(),
+        error => this.onError()
+      )
+  }
+
+  onSuccess() {
+    this.router.navigate(['exemplo'])
+  }
+
+  onError() {
+    console.error('error');
   }
 }

@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HomeModule } from './home/home.module';
 import { SharedModule } from './shared/shared.module';
+import { ExemploComponent } from './exemplo/exemplo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    ExemploComponent,
   ],
   imports: [
     BrowserModule,
