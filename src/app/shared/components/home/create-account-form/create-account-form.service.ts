@@ -20,7 +20,6 @@ export class CreateAccountFormService {
       headers: headers,
     };
 
-    console.log(user);
     return this.http.post<User>(`${this.API_URL}/usuarios`, user, httpOptions);
   }
 }
