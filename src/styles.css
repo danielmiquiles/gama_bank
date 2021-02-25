@@ -3,19 +3,121 @@
     font-family: Roboto;
     src: url("./assets/fonts/Roboto-Regular.ttf") format("truetype");
 }
-
-:root{
-    --cor-bg-primary: #8C52E5;
-    --cor-bg-secundary: #68DE5A;
-    --cor-bg-light: #F8F8F8;
-    --cor-bg-dark: #000000;
-    --cor-bg-medium: #EAEAEA;
-    --cor-bg-default: #1783E7;
+@font-face {
+    font-family: Roboto-500;
+    src: url("./assets/fonts/Roboto-Medium.ttf") format("truetype");
 }
 
-* {
+@font-face {
+    font-family: Roboto-700;
+    src: url("./assets/fonts/Roboto-Bold.ttf") format("truetype");
+}
+
+:root{
+    --bg-primary: #8C52E5;
+    --bg-primary-dark: #692fc0;
+    --bg-secundary: #68DE5A;
+    --bg-light: #F8F8F8;
+    --bg-dark: #000000;
+    --bg-medium: #EAEAEA;
+    --bg-default: #1783E7;
+    --button-disabled: #D8D8D8;
+    --white: #FFFFFF;
+    --black: #000000;
+    --red: #FF0000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    margin: 0;
+}
+
+body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Roboto', 'arial', sans-serif;
-  }
+}
+
+input {
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width: 100%;
+    border:none;
+    border-bottom:1px solid #757575;
+}
+  
+input:focus { outline:none; }
+    
+label  {
+    color:#999; 
+    font-size: 0.9rem;
+    font-weight:normal;
+    pointer-events:none;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+}
+    
+input:focus ~ label, input:valid ~ label {
+    top:-20px;
+    font-size:14px;
+    color:var(--bg-primary);
+}
+    
+.bar { position:relative; display:block; width: 100%; }
+.bar:before, .bar:after {
+    content:'';
+    height:2px; 
+    width:0;
+    bottom:1px; 
+    position:absolute;
+    background:var(--bg-primary); 
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+}
+  
+.bar:before {
+    left:50%;
+}
+  
+.bar:after {
+    right:50%; 
+}
+    
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+    width:50%;
+}
+    
+.highlight {
+    position:absolute;
+    height:60%; 
+    width:100px; 
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+}
+    
+input:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+}
+    
+@-webkit-keyframes inputHighlighter {
+    from { background:var(--bg-primary); }
+    to 	{ width:0; background:transparent; }
+}
+  
+@-moz-keyframes inputHighlighter {
+    from { background:var(--bg-primary); }
+    to 	{ width:0; background:transparent; }
+}
+  
+@keyframes inputHighlighter {
+    from { background:var(--bg-primary); }
+    to 	{ width:0; background:transparent; }
+}

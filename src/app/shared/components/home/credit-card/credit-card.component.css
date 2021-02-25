@@ -1,0 +1,81 @@
+.account {
+    padding: 1rem;
+    background: var(--bg-medium);
+}
+
+.account__details {
+    color: var(--bg-secundary);
+    background: var(--black);
+    /* background: url(../../../../../assets/img/app-bg1.png) left  no-repeat ; */
+    height: auto;
+}
+
+.account__details-img {
+    width: 100%;
+    margin-left: -15px;
+}
+
+.account__details,
+.account__credit {
+    padding: 1rem;
+}
+
+.account__details-title, 
+.account__details-text, 
+.account__credit-title,
+.account__credit-text {
+    text-align: center;
+}
+
+.account__details-text,
+.account__credit-text {
+    font-weight: 400;
+}
+
+.account__credit {
+    background: var(--white);
+}
+
+.account__credit-img {
+    margin-top: 5%;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .account {
+        display: flex;
+    }
+
+    .account__details-img, 
+    .account__credit-img {
+        width: 84%;
+        margin-top: 6rem;
+    }
+
+    .account__details-text, 
+    .account__credit-text {
+        text-align: left;
+        width: 50%;
+    }
+
+    .account__credit-tex {
+        margin-top: 3rem;
+    }
+
+    .account__credit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .account {
+        justify-content: center;
+    }
+
+    .account__credit-img {
+        width: 60%;
+    }
+}

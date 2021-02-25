@@ -1,0 +1,83 @@
+.home {
+    background-color: var(--bg-primary);
+    height: auto;
+    padding: 1rem;
+}
+
+.home__header {
+    display: flex;
+    justify-content: center;
+}
+
+.home__img {
+    margin-top: 10%;
+    width: 100%;
+}
+
+.home__create-account {
+    color: var(--white);
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%
+}
+
+.home__link {
+    background-color: var(--white);
+    color: var(--bg-primary);
+    height: 15vh;
+    padding: 1rem;
+    border-radius: 25px;
+}
+
+@media screen and (min-width: 768px) {
+    .home {
+        padding: 2rem;
+    }
+
+    .home__header {
+        justify-content: flex-start;
+    }
+
+    .home__img {
+        display: none;
+    }
+
+    .home__create-account {
+        display: flex;
+        align-items: baseline;
+    }
+    
+    .home__presentation {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .home {
+        background: url(../../../../../assets/img/happyhappy.png) no-repeat center 9rem var(--bg-primary);
+    }
+
+    .home__presentation {
+        height: auto;
+        margin-left: 6rem;
+    }
+
+    .home__link {
+        margin-top: 3rem;
+        padding-right: 8rem;
+    }
+
+    .home__create-account {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .home__title {
+        width: 45%;
+    }
+
+    .home__text {
+        margin-bottom: 3rem;
+    }
+}

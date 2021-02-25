@@ -1,0 +1,29 @@
+.complexity {
+    background: url(../../../../../assets/img/guys.png) no-repeat center var(--bg-secundary);
+    color: var(--white);
+    padding: 1rem;
+    text-align: center;
+}
+
+.complexity__title {
+    font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+    .complexity {
+        padding: 9rem;
+        text-align: left;
+    }
+
+    .complexity__text {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .complexity {
+        padding: 20rem;
+    }
+
+}
