@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { AnnuityComponent } from './components/home/annuity/annuity.component';
 import { ComplexityComponent } from './components/home/complexity/complexity.component';
@@ -23,6 +24,7 @@ import { SimpleLifeComponent } from './components/home/simple-life/simple-life.c
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    RouterModule
   ],
   exports: [
     CreateAccountComponent,

@@ -1,10 +1,17 @@
 <section class="login">
+  <!-- <header>
+        <div class="login__logo">
+            <img src="../../../../assets/img/logo.png" alt="Logo Gama Academy">
+        </div>
+    </header> -->
   <main class="login__main">
-      <div class="login__logo">
-          <img src="../../../../assets/img/logo.png" alt="Logo Gama Academy">
-      </div>
+    <div class="login__logo">
+      <a href="https://www.gama.academy/">
+        <img src="../../../../assets/img/logo.png" alt="Logo Gama Academy" />
+      </a>
+    </div>
     <div class="login__card">
-      <form class="form">
+      <form class="form" #form="ngForm" (ngSubmit)="onSubmit(form)">
         <header class="form__header">
           <h2>Faça seu login</h2>
         </header>
@@ -13,8 +20,9 @@
           <input
             type="text"
             placeholder="Digite seu usuário"
-            id="login"
-            formControlName="login"
+            name="login"
+            [(ngModel)]="login"
+            #loginInput
           />
           <span class="highlight"></span>
           <span class="bar"></span>
@@ -25,8 +33,9 @@
           <input
             type="password"
             placeholder="Digite sua senha"
-            id="senha"
-            formControlName="senha"
+            name="senha"
+            [(ngModel)]="senha"
+            #senhaInput
           />
           <span class="highlight"></span>
           <span class="bar"></span>
@@ -36,7 +45,6 @@
         <button
           type="submit"
           class="form__button form__button--disabled"
-          (click)="onSubmit()"
         >
           Continuar
           <svg
@@ -53,6 +61,13 @@
             />
           </svg>
         </button>
+
+        <a class="login__link login__link--purple" routerLink="/forgot"
+          >Esqueci minha senha</a
+        >
+        <a class="login__link login__link--purple" routerLink=""
+          >Ainda não sou cliente</a
+        >
       </form>
     </div>
   </main>
