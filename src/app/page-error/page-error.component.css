@@ -1,11 +1,15 @@
 .error {
     background-color: var(--bg-primary);
     height: 100vh;
-    display: grid;
-    place-items: center;
 }
 
 .error__card {
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+
+.error__card-content {
     align-items: center;
     background-color: var(--white);
     border-radius: 8px;
@@ -37,4 +41,32 @@
     font-size: 1rem;
     justify-content: space-between;
     padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+
+    .error__card-content {
+        width: 50%;
+    }
+
+    .error__header {
+        padding: 1rem 1rem 0;
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .error {
+        overflow: hidden;
+    }
+
+    .error__card-content {
+        height: 55vh;
+        width: 25%;
+    }
+    
+    .error__card-text {
+        padding: 1rem;
+    }
 }
