@@ -3,6 +3,10 @@
     height: 100vh;
 }
 
+.error__header {
+    padding: 1rem;
+}
+
 .error__card {
     display: grid;
     height: 100vh;
