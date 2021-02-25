@@ -5,6 +5,7 @@ import {
   ActivatedRouteSnapshot,
   RouterStateSnapshot,
   UrlTree,
+  Router,
 } from '@angular/router';
 import { Observable } from 'rxjs';
 
@@ -12,9 +13,13 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class NoAuthGuard implements CanActivate {
-  constructor(private authService: AuthService) {}
+  constructor(
+    private authService: AuthService,
+    private router: Router
+    ) {}
   canActivate(): boolean {
     if (!this.authService.estaLogado) {
+      this.router.navigate(['']);
       return true;
     }
     return false;
