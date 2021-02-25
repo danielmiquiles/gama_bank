@@ -9,10 +9,10 @@ import { LoginService } from './../login.service';
 })
 export class LoginComponent {
 
-  @ViewChild('loginInput') loginInput: ElementRef
+  @ViewChild('loginInput') usuarioInput: ElementRef
   @ViewChild('senhaInput') senhaInput: ElementRef
 
-  login: string;
+  usuario: string;
   senha: string;
   estaCarregando: boolean;
   erroNoLogin: boolean;
@@ -29,8 +29,8 @@ export class LoginComponent {
       form.controls.login.markAsTouched();
       form.controls.senha.markAsTouched();
 
-      if(form.controls.login.invalid){
-        this.loginInput.nativeElement.focus();
+      if(form.controls.usuario.invalid){
+        this.usuarioInput.nativeElement.focus();
         return;
       } else {
         this.senhaInput.nativeElement.focus();
@@ -41,13 +41,11 @@ export class LoginComponent {
   }
 
   signin(){
+    const user = {"usuario": this.usuario, "senha": this.senha}
     this.estaCarregando = true;
-    this.loginService.signin(this.login, this.senha)
-    .pipe(
-      finalize(()=> this.estaCarregando = false)
-    )
+    this.loginService.signin(user)
     .subscribe(
-      response => this.router.navigate(['dashboard']),
+      response => console.log(response),
       error => {
         this.erroNoLogin = true;
       },
