@@ -1,0 +1,106 @@
+.login{
+    background-color: var(--bg-primary);
+    min-height: 100vh;
+}
+.login__main{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.login__logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+
+.form {
+  background-color: var(--white);
+  border-radius: 8px;
+  color: var(--black);
+  height: auto;
+  margin-top: 3rem;
+  text-align: left;
+  padding: 2rem;
+  width: 70vw;
+}
+
+.form__header {
+  text-align: center;
+}
+
+.form__header h2 {
+  font-weight: 700;
+}
+
+.form__inputs {
+  margin-top: 1rem;
+}
+
+.form__validation {
+  font-size: 0.9rem;
+  color: var(--red);
+}
+
+.form__button {
+  align-items: center;
+  background-color: var(--bg-secundary);
+  border: none;
+  border-radius: 3rem;
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  font-size: 1.2rem;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding: 1.2rem;
+  width: 100%;
+  transition: all 0.5s ease-out;
+}
+
+.form__button:hover {
+  background-color: var(--bg-primary-dark);
+}
+
+.ng-invalid.ng-touched {
+  border-color: var(--red);
+}
+
+.form__button--disabled:disabled {
+  background-color: var(--button-disabled);
+}
+
+::-webkit-input-placeholder {
+  /* Edge */
+  color: #999;
+  font-size: 0.9rem;
+  font-weight: normal;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #999;
+  font-size: 0.9rem;
+  font-weight: normal;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+::placeholder {
+  color: #999;
+  font-size: 0.9rem;
+  font-weight: normal;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
