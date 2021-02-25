@@ -1,4 +1,8 @@
+import { Router } from '@angular/router';
+import { AuthService } from './../../../shared/services/auth.service';
+import { ResponseAPI } from 'src/app/shared/interfaces/resposeApi.interface';
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { finalize, take } from 'rxjs/operators';
 
 import { LoginService } from './../login.service';
 
@@ -16,10 +20,11 @@ export class LoginComponent {
   senha: string;
   estaCarregando: boolean;
   erroNoLogin: boolean;
-  router: any;
 
   constructor(
-    private loginService: LoginService
+    private loginService: LoginService,
+    private authSevice: AuthService,
+    private router: Router
   ) { }
 
   onSubmit(form){
@@ -42,15 +47,20 @@ export class LoginComponent {
 
   signin(){
     const user = {"usuario": this.usuario, "senha": this.senha}
-    this.estaCarregando = true;
     this.loginService.signin(user)
+    .pipe(
+      take(1)
+    )
     .subscribe(
-      response => console.log(response),
-      error => {
-        this.erroNoLogin = true;
+      _response => this.onSuccess(),
+      error => {        
+        console.log(error);
       },
     )
+  }
 
+  onSuccess(){
+    this.router.navigate(['']);
   }
 
   // exibeErro(nomeControle: string, form: NgForm){
