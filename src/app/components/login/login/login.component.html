@@ -1,9 +1,4 @@
 <section class="login">
-  <!-- <header>
-        <div class="login__logo">
-            <img src="../../../../assets/img/logo.png" alt="Logo Gama Academy">
-        </div>
-    </header> -->
   <main class="login__main">
     <div class="login__logo">
       <a href="https://www.gama.academy/">
@@ -11,7 +6,7 @@
       </a>
     </div>
     <div class="login__card">
-      <form class="form" #form="ngForm" (ngSubmit)="onSubmit(form)">
+      <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <header class="form__header">
           <h2>Faça seu login</h2>
         </header>
@@ -21,8 +16,7 @@
             type="text"
             placeholder="Digite seu usuário"
             name="usuario"
-            [(ngModel)]="usuario"
-            #usuarioInput
+            formControlName="usuario"
           />
           <span class="highlight"></span>
           <span class="bar"></span>
@@ -34,8 +28,7 @@
             type="password"
             placeholder="Digite sua senha"
             name="senha"
-            [(ngModel)]="senha"
-            #senhaInput
+            formControlName="senha"
           />
           <span class="highlight"></span>
           <span class="bar"></span>
@@ -45,6 +38,7 @@
         <button
           type="submit"
           class="form__button form__button--disabled"
+          [disabled]="loginForm.invalid"
         >
           Continuar
           <svg
@@ -72,3 +66,4 @@
     </div>
   </main>
 </section>
+
