@@ -6,19 +6,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from './home/home.module';
-import { PageErrorComponent } from './page-error/page-error.component';
+import { PageErrorModule } from './page-error/page-error.module';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageErrorComponent
   ],
   imports: [
     CommonModule,
     BrowserModule,
     SharedModule,
     HomeModule,
+    PageErrorModule,
     HttpClientModule,
     AppRoutingModule,
   ],

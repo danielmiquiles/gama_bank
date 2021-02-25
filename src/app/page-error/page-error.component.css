@@ -1,0 +1,40 @@
+.error {
+    background-color: var(--bg-primary);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.error__card {
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+    width: 80%;
+}
+
+.error__card-text {
+    color: var(--bg-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.error__card-button {
+    width: 100%;
+}
+
+.error__card-button--link {
+    align-items: center;
+    background: var(--bg-secundary);
+    border-radius: 20px;
+    color: var(--white);
+    display: flex;
+    font-size: 1rem;
+    justify-content: space-between;
+    padding: 1rem;
+}
