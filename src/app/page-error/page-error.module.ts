@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { PageErrorRoutingModule } from './page-error-routing.module';
 import { PageErrorComponent } from './page-error.component';
@@ -12,6 +13,7 @@ import { PageErrorComponent } from './page-error.component';
   imports: [
     CommonModule,
     PageErrorRoutingModule,
+    RouterModule
   ],
   exports: [
     PageErrorComponent
