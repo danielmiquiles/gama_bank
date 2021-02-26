@@ -6,6 +6,7 @@ import { CardComponent } from './card/card.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LastestReleaseComponent } from './lastest-release/lastest-release.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 @NgModule({
@@ -13,7 +14,7 @@ import { LastestReleaseComponent } from './lastest-release/lastest-release.compo
     DashboardComponent, 
     CardComponent, 
     AccountCreditComponent, 
-    LastestReleaseComponent
+    LastestReleaseComponent, SidebarComponent
   ],
   imports: [
     CommonModule,
