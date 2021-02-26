@@ -1,0 +1,40 @@
+.dash{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.dash__nav{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 10vh;
+    order: 2;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    color:#ffffff;
+    background-color: var(--bg-secundary);
+    text-align: center;
+    padding: 2rem;
+}
+
+.dash__main{
+    min-height: 80vh;
+    background-color: var(--bg-primary);
+    padding: 5rem 2rem;
+}
+
+.dash__welcome{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dash__visible{
+    border-radius: 50%;
+    border: none;
+    height: 2rem;
+    width: 2rem;
+    background-color: var(--bg-secundary);
+}
