@@ -170,3 +170,9 @@ input:focus ~ .highlight {
     align-items: baseline;
     justify-content: space-between;
 }
+
+@media screen and (min-width: 748px) {
+    .card__span {
+        margin-left: 2%;
+    }
+}

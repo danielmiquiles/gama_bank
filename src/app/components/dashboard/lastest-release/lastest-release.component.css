@@ -12,3 +12,10 @@
     color: var(--gray-dark);
     font-size: 0.9rem;
 }
+
+@media screen and (min-width: 748px) {
+    .card__information {
+        display: flex;
+        justify-content: space-between;
+    }
+}

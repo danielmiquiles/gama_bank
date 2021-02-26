@@ -27,3 +27,15 @@
     width: 2rem;
     background-color: var(--bg-secundary);
 }
+
+@media screen and (min-width: 748px) {
+    .dash__money {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .dash__card {
+        width: 35vw;
+    }
+}
+
