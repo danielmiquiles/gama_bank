@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
 @font-face {
     font-family: Roboto;
     src: url("./assets/fonts/Roboto-Regular.ttf") format("truetype");
@@ -17,14 +16,17 @@
     --bg-primary: #8C52E5;
     --bg-primary-dark: #692fc0;
     --bg-secundary: #68DE5A;
+    --bg-secundary-dark: #4aac3f;
     --bg-light: #F8F8F8;
     --bg-dark: #000000;
     --bg-medium: #EAEAEA;
     --bg-default: #1783E7;
+    --button-disabled: #D8D8D8;
     --white: #FFFFFF;
     --black: #000000;
     --red: #FF000000;
     --gray-dark: #9B9B9B;
+    --red: #FF0000;
 }
 
 h1, h2, h3, h4, h5, h6 {

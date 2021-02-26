@@ -25,8 +25,8 @@
     background-color: var(--white);
     color: var(--bg-primary);
     height: 15vh;
-    padding: 0.6rem;
-    border-radius: 15px;
+    padding: 1rem;
+    border-radius: 25px;
 }
 
 @media screen and (min-width: 768px) {
@@ -61,7 +61,6 @@
     .home__presentation {
         height: auto;
         margin-left: 6rem;
-        width: 20%;
     }
 
     .home__link {
@@ -72,5 +71,13 @@
     .home__create-account {
         align-items: center;
         justify-content: space-between;
+    }
+
+    .home__title {
+        width: 45%;
+    }
+
+    .home__text {
+        margin-bottom: 3rem;
     }
 }
