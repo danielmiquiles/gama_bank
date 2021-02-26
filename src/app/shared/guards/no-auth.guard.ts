@@ -1,13 +1,7 @@
-import { AuthService } from '../services/auth.service';
 import { Injectable } from '@angular/core';
-import {
-  CanActivate,
-  ActivatedRouteSnapshot,
-  RouterStateSnapshot,
-  UrlTree,
-  Router,
-} from '@angular/router';
-import { Observable } from 'rxjs';
+import { CanActivate, Router } from '@angular/router';
+
+import { AuthService } from '../services/auth.service';
 
 @Injectable({
   providedIn: 'root',
@@ -18,10 +12,11 @@ export class NoAuthGuard implements CanActivate {
     private router: Router
     ) {}
   canActivate(): boolean {
-    if (!this.authService.estaLogado) {
-      this.router.navigate(['']);
-      return true;
+    const estaLogado =  this.authService.estaLogado();
+    if (estaLogado) {
+      this.router.navigate(['/home'])
+      return false;
     }
-    return false;
+    return true;
   }
 }
