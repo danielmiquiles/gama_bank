@@ -1,7 +1,8 @@
-import { NoAuthGuard } from './shared/guards/no-auth.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthGuard } from './shared/guards/auth.guard';
+
+import { EsqueciSenhaComponent } from './esqueci-senha/esqueci-senha.component';
+import { NoAuthGuard } from './shared/guards/no-auth.guard';
 
 const routes: Routes = [
   {
@@ -14,6 +15,9 @@ const routes: Routes = [
       import('./components/login/login.module').then((m) => m.LoginModule),
       canActivate: [NoAuthGuard]
   },
+  { path:'esqueci-senha',
+    component:EsqueciSenhaComponent,
+  }
 ];
 
 @NgModule({
