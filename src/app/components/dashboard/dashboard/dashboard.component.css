@@ -4,21 +4,6 @@
     min-height: 100vh;
 }
 
-.dash__nav{
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-    height: 10vh;
-    order: 2;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    color:#ffffff;
-    background-color: var(--bg-secundary);
-    text-align: center;
-    padding: 2rem;
-}
-
 .dash__main{
     min-height: 80vh;
     background-color: var(--bg-primary);
@@ -31,6 +16,10 @@
     align-items: center;
 }
 
+.dash__text {
+    color: var(--white);
+}
+
 .dash__visible{
     border-radius: 50%;
     border: none;
@@ -38,3 +27,15 @@
     width: 2rem;
     background-color: var(--bg-secundary);
 }
+
+@media screen and (min-width: 748px) {
+    .dash__money {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .dash__card {
+        width: 35vw;
+    }
+}
+

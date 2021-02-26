@@ -24,11 +24,12 @@
     --button-disabled: #D8D8D8;
     --white: #FFFFFF;
     --black: #000000;
+    --red: #FF000000;
+    --gray-dark: #9B9B9B;
     --red: #FF0000;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: normal;
     margin: 0;
 }
 
@@ -120,4 +121,60 @@ input:focus ~ .highlight {
 @keyframes inputHighlighter {
     from { background:var(--bg-primary); }
     to 	{ width:0; background:transparent; }
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-light);
+    height: auto;
+    border-radius: 0.3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.card__title,
+.card__span {
+    color: var(--gray-dark);
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.card__span {
+    margin-left: 5%;
+    font-size: 1rem;
+}
+
+.card__header{
+    display: flex;
+    align-items: center;
+    margin: 0 0 1rem 0;
+}
+
+.card__strong-title,
+.card__title--green {
+    font-size: 1rem;
+}
+
+.card__strong-title,
+.card__title--green {
+    font-weight: 700;
+}
+
+.card__title--green {
+    color: var(--bg-secundary);
+    margin-top: 5%;
+}
+
+.card__footer{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 748px) {
+    .card__span {
+        margin-left: 2%;
+    }
 }
