@@ -5,6 +5,7 @@
 
 .card__information-money {
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 .card-information-date {
