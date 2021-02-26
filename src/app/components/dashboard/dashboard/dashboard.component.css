@@ -31,6 +31,10 @@
     align-items: center;
 }
 
+.dash__text {
+    color: var(--white);
+}
+
 .dash__visible{
     border-radius: 50%;
     border: none;

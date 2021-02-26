@@ -120,3 +120,40 @@ input:focus ~ .highlight {
     from { background:var(--bg-primary); }
     to 	{ width:0; background:transparent; }
 }
+
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-light);
+    height: auto;
+    border-radius: 0.3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.card__title{
+    display: flex;
+    margin: 0 0 1rem 0 ;
+}
+
+.card__strong-title,
+.card__title-green {
+    font-size: 1rem;
+}
+
+.card__strong-title,
+.card__title-green {
+    font-weight: 700;
+}
+
+.card__title-green {
+    color: var(--bg-secundary);
+    margin-top: 5%;
+}
+
+.card__footer{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
