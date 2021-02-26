@@ -1,0 +1,13 @@
+.card__information-wallet {
+    display: flex;
+    flex-direction: column;
+}
+
+.card__information-money {
+    text-transform: uppercase;
+}
+
+.card-information-date {
+    color: var(--gray-dark);
+    font-size: 0.9rem;
+}
