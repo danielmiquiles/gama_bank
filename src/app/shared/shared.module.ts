@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { HomeComponent } from '../home/home.component';
 import { AnnuityComponent } from './components/home/annuity/annuity.component';
 import { ComplexityComponent } from './components/home/complexity/complexity.component';
 import { CreateAccountFormComponent } from './components/home/create-account-form/create-account-form.component';
@@ -25,7 +24,7 @@ import { SimpleLifeComponent } from './components/home/simple-life/simple-life.c
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    RouterModule.forRoot([ { path:'', component: HomeComponent } ])
+    RouterModule
   ],
   exports: [
     CreateAccountComponent,

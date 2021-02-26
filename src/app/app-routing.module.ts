@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
 import { NotFoundComponent } from './not-found/not-found.component';
+import { NoAuthGuard } from './shared/guards/no-auth.guard';
+
 
 const routes: Routes = [
   { path: 'page', loadChildren: () => import('./page-error/page-error.module').then(m => m.PageErrorModule) },
@@ -12,6 +13,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

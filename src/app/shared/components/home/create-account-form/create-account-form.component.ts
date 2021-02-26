@@ -43,8 +43,8 @@ export class CreateAccountFormComponent implements OnInit {
       this.validateAllFormFields();
       return;
     }
+    
     this.createUser();
-    console.log(this.userForm.value)
   }
 
   exibeErro(nomeControle: string) {
@@ -56,21 +56,20 @@ export class CreateAccountFormComponent implements OnInit {
 
   createUser() {
     const user = {
-      "nome": this.userForm.value.fullName,
-      "login": this.userForm.value.userName,
-      "cpf": this.userForm.value.cpf,
-      "senha": this.userForm.value.password,
-    }
+      "login": this.userForm.value.userName, 
+      "cpf": this.userForm.value.cpf, 
+      "senha": this.userForm.value.password, 
+      "nome": this.userForm.value.fullName
+    }    
     this.createAccountService.createUser(user)
     .subscribe(
       response => this.onSuccess(),
       error => this.onError(error)
-      )
-      console.log('passei aqui')
+      )      
   }
 
   onSuccess() {
-    console.log('criei')
+   
   }
 
   onError(error: any) {
