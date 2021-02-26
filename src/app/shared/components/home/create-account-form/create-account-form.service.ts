@@ -21,5 +21,5 @@ export class CreateAccountFormService {
     };
 
     return this.http.post<User>(`${this.API_URL}/usuarios`, user, httpOptions);
-  }
+
 }

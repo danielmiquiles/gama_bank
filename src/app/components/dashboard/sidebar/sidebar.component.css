@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    background-color: var(--bg-secundary);
+    overflow: scroll;
+}
+
+.navbar__header-logo {
+   display: none;
+}
+
+.navbar__items {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.navbar__items-content {
+    color: var(--white);
+    background-color: var(--bg-primary);
+    border-radius: 5px;
+    display: flex;
+    list-style: none;
+    width: auto;
+    margin-left: 2rem;
+    padding: 0 1rem;
+}
+
+.navbar__items-content-title {
+    margin-left: 0.9rem;
+}
