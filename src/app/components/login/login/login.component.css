@@ -140,7 +140,7 @@ button {
     max-width: 35vw;
   }
   .form__button {
-    padding: 0.8rem;
+    padding: 0.8rem 2rem;
   }
 }
 
