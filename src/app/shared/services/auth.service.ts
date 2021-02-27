@@ -52,6 +52,7 @@ export class AuthService {
     return this.getUsuario() && this.getToken() ? true : false;
   }
 
+
   logout() {
     this.usuario = null;
     this.token = null;
