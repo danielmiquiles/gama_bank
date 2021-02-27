@@ -1,5 +1,5 @@
 .complexity {
-    background: url(../../../../../assets/img/guys.png) no-repeat center var(--bg-secundary);
+    background: url('./../../../assets/img/guys.png') no-repeat center var(--bg-secundary);
     color: var(--white);
     padding: 1rem;
     text-align: center;

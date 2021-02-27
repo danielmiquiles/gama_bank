@@ -7,10 +7,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeModule } from './home/home.module';
-import { PageErrorModule } from './page-error/page-error.module';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 import { SharedModule } from './shared/shared.module';
-import { NotFoundComponent } from './not-found/not-found.component';
 
 registerLocaleData(localePt);
 

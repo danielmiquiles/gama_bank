@@ -22,11 +22,19 @@
 }
 
 .home__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
     background-color: var(--white);
     color: var(--bg-primary);
-    height: 15vh;
-    padding: 1rem;
-    border-radius: 25px;
+    font-size: 1.2rem;
+    height: 3vh;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+}
+.home__link:hover {
+    text-decoration: underline;
 }
 
 @media screen and (min-width: 768px) {
@@ -55,7 +63,7 @@
 @media screen and (min-width: 1200px) {
 
     .home {
-        background: url(../../../../../assets/img/happyhappy.png) no-repeat center 9rem var(--bg-primary);
+        background: url(../../../assets/img/happyhappy.png) no-repeat center 9rem var(--bg-primary);
     }
 
     .home__presentation {
@@ -65,7 +73,7 @@
 
     .home__link {
         margin-top: 3rem;
-        padding-right: 8rem;
+        width: 12vw;
     }
 
     .home__create-account {
