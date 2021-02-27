@@ -1,10 +1,9 @@
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from './../../../shared/services/auth.service';
-import { ResponseAPI } from 'src/app/shared/interfaces/resposeApi.interface';
-import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
-import { finalize, take } from 'rxjs/operators';
+import { take } from 'rxjs/operators';
 
+import { AuthService } from './../../../shared/services/auth.service';
 import { LoginService } from './../login.service';
 
 @Component({
@@ -55,7 +54,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSuccess(){
-    this.router.navigate(['']);
+    this.router.navigate(['/blocked']);
   } 
 
 }
