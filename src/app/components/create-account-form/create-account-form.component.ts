@@ -74,11 +74,11 @@ export class CreateAccountFormComponent implements OnInit {
         response => this.onSuccess(),
         error => this.onError(error)
         )
-        this.isSpinner = true;
-      }
+        console.log('criei')
+  }
       
-    onSuccess() {
-      this.router.navigate[('')]
+  onSuccess() {
+    this.router.navigate[('/login')]
 
   }
 
