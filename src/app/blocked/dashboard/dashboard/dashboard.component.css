@@ -47,7 +47,11 @@
     }
 
     .dash__main {
-        padding: 2rem;
+        padding: 3rem 5rem;
+    }
+
+    .dash__welcome {
+        width: 60vw;
     }
 }
 

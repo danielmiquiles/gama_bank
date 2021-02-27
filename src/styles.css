@@ -181,3 +181,10 @@ input:focus ~ .highlight {
         margin-left: 2%;
     }
 }
+
+@media screen and (min-width: 1200px) {
+    .card--dimension {
+        width: 20vw;
+        height: 24vh;
+    }
+}
