@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { EsqueciSenhaComponent } from './esqueci-senha/esqueci-senha.component'
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AuthGuard } from './shared/guards/auth.guard';
 import { NoAuthGuard } from './shared/guards/no-auth.guard';
@@ -29,6 +30,9 @@ const routes: Routes = [
     path: '**',
     component: NotFoundComponent,
   },
+  { path:'esqueci-senha',
+    component:EsqueciSenhaComponent,
+  }
 ];
 
 @NgModule({
