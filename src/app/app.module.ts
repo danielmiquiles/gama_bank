@@ -9,13 +9,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EsqueciSenhaComponent } from './esqueci-senha/esqueci-senha.component';
 import { SharedModule } from './shared/shared.module';
+import { SolicitarNovaSenhaComponent } from './solicitar-nova-senha/solicitar-nova-senha.component';
 
 registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
     AppComponent, 
-    EsqueciSenhaComponent],
+    EsqueciSenhaComponent, SolicitarNovaSenhaComponent],
   imports: [
     CommonModule,
     BrowserModule,
