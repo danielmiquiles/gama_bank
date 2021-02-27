@@ -52,10 +52,11 @@ export class AuthService {
     return this.getUsuario() && this.getToken() ? true : false;
   }
 
-  logout(){
+
+  logout() {
     this.usuario = null;
     this.token = null;
     localStorage.clear();
-    this.router.navigate(['login']);
+    this.router.navigate(['/login'])
   }
 }
