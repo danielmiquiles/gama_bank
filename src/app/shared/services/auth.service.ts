@@ -1,11 +1,15 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { User } from './../interfaces/user.interface';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  constructor() {}
+  constructor(
+    private router: Router
+  ) {}
 
   usuario: User;
   token: string;
@@ -46,5 +50,12 @@ export class AuthService {
 
   estaLogado(): boolean {
     return this.getUsuario() && this.getToken() ? true : false;
+  }
+
+  logout(){
+    this.usuario = null;
+    this.token = null;
+    localStorage.clear();
+    this.router.navigate(['login']);
   }
 }
