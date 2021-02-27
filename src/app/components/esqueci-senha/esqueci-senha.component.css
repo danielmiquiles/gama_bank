@@ -147,7 +147,7 @@
       left: 30px;
       top: 30px;
       display: flex;
-      justify-content: start;
+      justify-content: flex-start;
     }
   
     .form {
