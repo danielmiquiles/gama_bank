@@ -27,7 +27,25 @@
     width: auto;
 }
 
-.navbar__items-content:hover {
+.navbar__items-logout {
+    margin-left: 2rem;
+    list-style: none;
+}
+
+.navbar__items-logout-button {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--bg-primary);
+    color: var(--white);
+    cursor: pointer;
+    transition: all .5s ease-out;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+
+.navbar__items-content:hover,
+.navbar__items-logout-button:hover {
     background-color: var(--bg-primary-dark);
 }
 
@@ -70,5 +88,9 @@
     .navbar__items-content-title {
         margin: 1rem 0;
         font-size: 0.9rem;
+    }
+
+    .navbar__items-logout-button {
+        margin-top: 5%;
     }
 }
