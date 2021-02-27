@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { finalize } from 'rxjs/operators';
 import { User } from 'src/app/shared/interfaces/user.interface';
 
 import { CreateAccountFormService } from './create-account-form.service';
@@ -14,6 +15,8 @@ export class CreateAccountFormComponent implements OnInit {
 
   userForm: FormGroup;
   user: User;
+  isLoading: boolean;
+  isSpinner = false;
   
   constructor(
     private formBuilder: FormBuilder,
@@ -43,8 +46,8 @@ export class CreateAccountFormComponent implements OnInit {
       this.validateAllFormFields();
       return;
     }
-    
     this.createUser();
+    console.log(this.userForm.value)
   }
 
   exibeErro(nomeControle: string) {
@@ -55,21 +58,28 @@ export class CreateAccountFormComponent implements OnInit {
   }
 
   createUser() {
-    const user = {
-      "login": this.userForm.value.userName, 
-      "cpf": this.userForm.value.cpf, 
-      "senha": this.userForm.value.password, 
-      "nome": this.userForm.value.fullName
-    }    
-    this.createAccountService.createUser(user)
-    .subscribe(
-      response => this.onSuccess(),
-      error => this.onError(error)
-      )      
-  }
+    this.isLoading = true;
 
-  onSuccess() {
-   
+    const user = {
+      "nome": this.userForm.value.fullName,
+      "login": this.userForm.value.userName,
+      "cpf": this.userForm.value.cpf,
+      "senha": this.userForm.value.password,
+    }
+    this.createAccountService.createUser(user)
+    .pipe(
+      finalize(() => this.isLoading = false)
+      )
+      .subscribe(
+        response => this.onSuccess(),
+        error => this.onError(error)
+        )
+        this.isSpinner = true;
+      }
+      
+    onSuccess() {
+      this.router.navigate[('')]
+
   }
 
   onError(error: any) {

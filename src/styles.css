@@ -95,7 +95,6 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
 .highlight {
     position:absolute;
     height:60%; 
-    width:100%; 
     top:25%; 
     left:0;
     pointer-events:none;
@@ -171,6 +170,10 @@ input:focus ~ .highlight {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
+}
+
+.form__button-spinner {
+    width: 7%;
 }
 
 @media screen and (min-width: 748px) {
