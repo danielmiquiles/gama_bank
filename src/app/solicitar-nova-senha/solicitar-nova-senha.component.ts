@@ -3,8 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { take } from 'rxjs/operators';
 
-import { LoginService } from '../components/login/login.service';
-import { AuthService } from '../shared/services/auth.service';
+import { SolicitarNovaSenhaService } from './solicitar-nova-senha.service';
 
 @Component({
   selector: 'app-solicitar-nova-senha',
@@ -13,40 +12,36 @@ import { AuthService } from '../shared/services/auth.service';
 })
 export class SolicitarNovaSenhaComponent implements OnInit {
 
-  loginForm: FormGroup;
+  newSenhaForm: FormGroup;
 
   constructor(
-    private loginService: LoginService,
-    private authSevice: AuthService,
+    private solicitarNovaSenhaService: SolicitarNovaSenhaService,    
     private router: Router,
     private formBuilder: FormBuilder,
   ) { }
 
   ngOnInit(): void {
-    this.criarFormularioDeLogin();
+    this.criarNovaSenha();
   }
 
-  criarFormularioDeLogin() {
-    this.loginForm = this.formBuilder.group({
-      usuario: ['', Validators.required],
-      senha: ['', Validators.required],
+  criarNovaSenha() {
+    this.newSenhaForm = this.formBuilder.group({
+      login: ['', Validators.required],
+      cpf: ['', Validators.required],
     });
   }
 
   onSubmit(){
-    if(!this.loginForm.valid){
-      return;
-    }
-    this.signin()
+    this.solicitarNewSenha();
   }
 
-  signin(){
-    this.loginService.signin(this.loginForm.value)
+  solicitarNewSenha(){
+    this.solicitarNovaSenhaService.solicitarNewSenha(this.newSenhaForm.value)
     .pipe(
       take(1)
     )
     .subscribe(
-      _response => this.onSuccess(),
+      response => console.log(response),      
       error => {        
         console.log(error);
       },
@@ -58,3 +53,7 @@ export class SolicitarNovaSenhaComponent implements OnInit {
   } 
 
 }
+
+
+
+

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+
 import { User } from './../interfaces/user.interface';
 
 @Injectable({
@@ -47,4 +48,9 @@ export class AuthService {
   estaLogado(): boolean {
     return this.getUsuario() && this.getToken() ? true : false;
   }
+
+  setNewsenha(response: string){
+    localStorage.setItem('Senha Provisoria',response)
+  }
+
 }

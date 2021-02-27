@@ -6,29 +6,28 @@
         </a>
       </div>
       <div class="login__card">
-        <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <form class="form" [formGroup]="newSenhaForm" (ngSubmit)="onSubmit()">
           <header class="form__header">
-            <h2>Faça seu login</h2>
+            <h2>Solicitar nova senha</h2>
           </header>
   
           <div class="form__inputs">
             <input
               type="text"
-              placeholder="Digite seu usuário"
-              name="usuario"
-              formControlName="usuario"
+              placeholder="Digite seu usuário" 
+              name="login"
+              formControlName="login"
             />
             <span class="highlight"></span>
             <span class="bar"></span>
-            <!-- <p *ngIf="exibeErro('userName')" class="form__validation">Nome de usuário inválido</p> -->
           </div>
   
           <div class="form__inputs">
             <input
-              type="password"
-              placeholder="Digite sua senha"
-              name="senha"
-              formControlName="senha"
+              type="text"
+              placeholder="Digite seu CPF"
+              name="cpf"
+              formControlName="cpf"
             />
             <span class="highlight"></span>
             <span class="bar"></span>
@@ -38,7 +37,7 @@
           <button
             type="submit"
             class="form__button form__button--disabled"
-            [disabled]="loginForm.invalid"
+            [disabled]="newSenhaForm.invalid"
           >
             Continuar
             <svg
@@ -56,12 +55,6 @@
             </svg>
           </button>
   
-          <a class="login__link login__link--purple" routerLink="/forgot"
-            >Esqueci minha senha</a
-          >
-          <a class="login__link login__link--purple" routerLink=""
-            >Ainda não sou cliente</a
-          >
         </form>
       </div>
     </main>
