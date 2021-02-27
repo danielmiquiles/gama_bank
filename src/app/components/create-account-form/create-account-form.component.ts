@@ -13,6 +13,7 @@ import { CreateAccountFormService } from './create-account-form.service';
 export class CreateAccountFormComponent implements OnInit {
 
   userForm: FormGroup;
+  user: User;
   
   constructor(
     private formBuilder: FormBuilder,
@@ -42,7 +43,7 @@ export class CreateAccountFormComponent implements OnInit {
       this.validateAllFormFields();
       return;
     }
-    // console.log(this.userForm.value)
+    
     this.createUser();
   }
 
@@ -62,14 +63,13 @@ export class CreateAccountFormComponent implements OnInit {
     }    
     this.createAccountService.createUser(user)
     .subscribe(
-      response => this.onSuccess(response),
+      response => this.onSuccess(),
       error => this.onError(error)
       )      
   }
 
-  onSuccess(response: User) {
-    // this.router.navigate(['exemplo'])
-    console.log(response)
+  onSuccess() {
+   
   }
 
   onError(error: any) {
