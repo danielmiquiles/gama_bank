@@ -8,6 +8,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EsqueciSenhaComponent } from './esqueci-senha/esqueci-senha.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 import { SharedModule } from './shared/shared.module';
 
 registerLocaleData(localePt);
@@ -15,7 +16,10 @@ registerLocaleData(localePt);
 @NgModule({
   declarations: [
     AppComponent, 
-    EsqueciSenhaComponent],
+    EsqueciSenhaComponent
+    NotFoundComponent,
+  ],
+
   imports: [
     CommonModule,
     BrowserModule,
@@ -30,6 +34,7 @@ registerLocaleData(localePt);
       provide: LOCALE_ID,
       useValue: 'pt-BR',
     },
+
   ],
   bootstrap: [AppComponent],
 })
