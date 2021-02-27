@@ -1,0 +1,70 @@
+<section class="login">
+  <main class="login__main">
+    <div class="login__logo">
+      <a href="https://www.gama.academy/">
+        <img src="../../../../assets/img/logo.png" alt="Logo Gama Academy" />
+      </a>
+    </div>
+    <div class="login__card">
+      <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <header class="form__header">
+          <h2>Faça seu login</h2>
+        </header>
+
+        <div class="form__inputs">
+          <input
+            type="text"
+            placeholder="Digite seu usuário"
+            name="usuario"
+            formControlName="usuario"
+          />
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <p *ngIf="exibeErro('usuario')" class="form__validation">Nome de usuário inválido</p>
+        </div>
+
+        <div class="form__inputs">
+          <input
+            type="password"
+            placeholder="Digite sua senha"
+            name="senha"
+            formControlName="senha"
+          />
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <p *ngIf="exibeErro('senha')" class="form__validation">Senha inválida</p>
+        </div>
+
+        <button
+          type="submit"
+          class="form__button form__button--disabled"
+          [disabled]="loginForm.invalid"
+        >
+          Continuar
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-arrow-right"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+            />
+          </svg>
+          <img src="../../../../assets/img/spinner.gif" alt="Gif de spinner" class="form__button-spinner " *ngIf="isSpinner">
+        </button>
+
+        <a class="login__link login__link--purple" routerLink="/forgot"
+          >Esqueci minha senha ></a
+        >
+        <a class="login__link login__link--purple" routerLink=""
+          >Ainda não sou cliente ></a
+        >
+      </form>
+    </div>
+  </main>
+</section>
+
