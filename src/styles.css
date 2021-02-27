@@ -154,6 +154,7 @@ input:focus ~ .highlight {
 .card__strong-title,
 .card__title--green {
     font-size: 1rem;
+    transition: all .5s ease-out;
 }
 
 .card__strong-title,

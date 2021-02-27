@@ -18,11 +18,13 @@
 
 .dash__text {
     color: var(--white);
+    transition: all .5s ease-out;
 }
 
 .dash__visible{
     border-radius: 50%;
     border: none;
+    cursor: pointer;
     height: 2rem;
     width: 2rem;
     background-color: var(--bg-secundary);
