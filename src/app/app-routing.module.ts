@@ -26,14 +26,14 @@ const routes: Routes = [
     loadChildren: () => import('./components/login/login.module').then( m => m.LoginModule),
     canActivate: [NoAuthGuard]
   },
+  { 
+    path:'forgot',
+    component:EsqueciSenhaComponent,
+  },
   {
     path: '**',
     component: NotFoundComponent,
   },
-  { 
-    path:'forgot',
-    component:EsqueciSenhaComponent,
-  }
 ];
 
 @NgModule({
