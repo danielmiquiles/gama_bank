@@ -10,6 +10,7 @@ import { LastestReleaseComponent } from './lastest-release/lastest-release.compo
 import { PlanComponent } from './plan/plan.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { AccountsComponent } from './accounts/accounts.component';
+import { CreatePlanComponent } from './create-plan/create-plan.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { AccountsComponent } from './accounts/accounts.component';
     LastestReleaseComponent, 
     SidebarComponent,
     PlanComponent,
-    AccountsComponent
+    AccountsComponent,
+    CreatePlanComponent
   ],
   imports: [
     RouterModule,
