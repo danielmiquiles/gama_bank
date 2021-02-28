@@ -1,0 +1,46 @@
+<section class="card card--width">
+    <header class="card__header">
+        <h2>Realize seu depósito</h2>
+    </header>
+    <form class="form" [formGroup]="depositForm">
+        <div class="form__inputs">
+            <input 
+            type="date"
+            formControlName="date">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <p *ngIf="exibeErro('date')" class="form__validation">Data é obrigatório</p>
+        </div>
+        
+        <div class="form__inputs">
+            <label for="descriptionInput">Descrição</label>
+            <input 
+            type="text" 
+            id="descriptionInput"
+            formControlName="description">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <p *ngIf="exibeErro('description')" class="form__validation">Descrição é obrigatório</p>
+        </div>
+
+        <div class="form__inputs">
+            <label for="valueInput">Qual o valor da sua tranferência?</label>
+            <input 
+            type="text" 
+            id="valueInput"
+            formControlName="valueTransfer">
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <p *ngIf="exibeErro('valueTransfer')" class="form__validation">Valor é obrigatório</p>
+        </div>
+
+        <footer class="form__footer">
+            <button class="form__button form__button--dimension form__button--disabled" [disabled]="depositForm.invalid">
+                Depositar agora
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/></svg>  
+                <img src="../../../assets/img/spinner.gif" class="form__button-spinner" alt="Gif de spinner" *ngIf="isSpinner">  
+            </button>
+        </footer>
+    </form>
+</section>
