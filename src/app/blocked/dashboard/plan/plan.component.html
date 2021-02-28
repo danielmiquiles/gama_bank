@@ -1,0 +1,11 @@
+<section class="card">
+    <div class="card__plan" *ngFor="let plan of plans">
+        <h3 class="card__plan-title">{{ plan.descricao }}</h3>
+        <h5 class="card__plan-subtitle">{{ plan.login }}</h5>
+        <p class="card__plan-type">Movimentação do tipo: <span>{{ plan.tipoMovimento }}</span></p>
+    </div>
+<!-- 
+    <div class="card__error" *ngIf="plans == null">
+        <p class="card__error-title">Você ainda não tem planos de contas!</p>
+    </div> -->
+</section>

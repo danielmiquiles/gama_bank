@@ -1,12 +1,14 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
 import { BlockedRoutingModule } from './blocked-routing.module';
-import { BlockedComponent } from './blocked/blocked.component';
+import { BlockedComponent } from './blocked.component';
 
 
 @NgModule({
-  declarations: [BlockedComponent],
+  declarations: [
+    BlockedComponent, 
+  ],
   imports: [
     CommonModule,
     BlockedRoutingModule

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { finalize } from 'rxjs/operators';
 import { User } from 'src/app/shared/interfaces/user.interface';
 
@@ -21,7 +22,8 @@ export class CreateAccountFormComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    private createAccountService:  CreateAccountFormService
+    private createAccountService:  CreateAccountFormService,
+    private toastr: ToastrService
   ) { }
 
   ngOnInit(): void {
@@ -66,23 +68,24 @@ export class CreateAccountFormComponent implements OnInit {
       "cpf": this.userForm.value.cpf,
       "senha": this.userForm.value.password,
     }
+    this.isSpinner = true;
     this.createAccountService.createUser(user)
     .pipe(
       finalize(() => this.isLoading = false)
-      )
-      .subscribe(
-        response => this.onSuccess(),
-        error => this.onError(error)
-        )
-        console.log('criei')
+    )
+    .subscribe(
+      response => this.onSuccess(),
+      error => this.onError(error)
+    )
   }
       
   onSuccess() {
-    this.router.navigate[('/login')]
-
+    this.toastr.success('Você criou um usuário', "Parabéns!")
+    this.router.navigate(['/login'])
   }
 
   onError(error: any) {
-    console.error(error);
+    this.toastr.error('Esse usuário já existe!', 'Tente outro nome', error)
+    this.isSpinner = false;
   }
 }
