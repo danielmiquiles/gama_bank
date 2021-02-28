@@ -13,11 +13,10 @@ export class EsqueciSenhaService {
 
   constructor(private http: HttpClient, private authService: AuthService) {}
 
-  signin(usuario: EsqueciSenha) {
-    const user = this.authService.getUsuario();
+  alterarSenha(usuario: EsqueciSenha) {
     return this.http.post(`${this.API_URL}/altera-senha`, usuario, {
       params: {
-        login: user.login,
+        senhaTemporaria: this.authService.getNewsenha(),
       },
     });
   }
