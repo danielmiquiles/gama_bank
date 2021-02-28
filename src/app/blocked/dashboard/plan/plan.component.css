@@ -1,9 +1,11 @@
 .card__plan {
-    width: 20%;
     height: auto;
     border: 1px solid var(--bg-primary);
     border-radius: 5px;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
 }
 
 .card__plan-subtitle {

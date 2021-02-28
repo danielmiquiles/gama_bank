@@ -4,6 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { AccountCreditComponent } from './account-credit/account-credit.component';
+import { AccountsComponent } from './accounts/accounts.component';
 import { CardComponent } from './card/card.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -22,7 +23,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     LastestReleaseComponent, 
     SidebarComponent, 
     DepositComponent,
-    PlanComponent
+    PlanComponent,
+    AccountsComponent
   ],
   imports: [
     RouterModule,
