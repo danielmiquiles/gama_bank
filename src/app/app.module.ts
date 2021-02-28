@@ -10,13 +10,15 @@ import { AppComponent } from './app.component';
 import { EsqueciSenhaComponent } from './components/esqueci-senha/esqueci-senha.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { SharedModule } from './shared/shared.module';
+import { SolicitarNovaSenhaComponent } from './solicitar-nova-senha/solicitar-nova-senha.component';
 
 registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
     AppComponent, 
-    EsqueciSenhaComponent,
+    EsqueciSenhaComponent, 
+    SolicitarNovaSenhaComponent,
     NotFoundComponent,
   ],
 
