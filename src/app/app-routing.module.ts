@@ -5,6 +5,8 @@ import { EsqueciSenhaComponent } from './components/esqueci-senha/esqueci-senha.
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AuthGuard } from './shared/guards/auth.guard';
 import { NoAuthGuard } from './shared/guards/no-auth.guard';
+import { SolicitarNovaSenhaComponent } from './solicitar-nova-senha/solicitar-nova-senha.component';
+
 
 const routes: Routes = [
   {
@@ -21,14 +23,18 @@ const routes: Routes = [
     loadChildren: () => import('./components/login/login.module').then( m => m.LoginModule),
     canActivate: [NoAuthGuard]
   },
+  { 
+    path:'esqueci-senha',
+    component: EsqueciSenhaComponent,
+  },
+  {
+    path:'solicitar-nova-senha',
+    component: SolicitarNovaSenhaComponent,
+  },
   {
     path: '**',
     component: NotFoundComponent,
   },
-  { 
-    path:'forgot',
-    component:EsqueciSenhaComponent,
-  }
 ];
 
 @NgModule({

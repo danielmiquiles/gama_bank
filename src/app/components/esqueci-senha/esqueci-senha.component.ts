@@ -29,14 +29,14 @@ export class EsqueciSenhaComponent implements OnInit {
 
   criarFormularioDeEsqueci() {
     this.EsqueciForm = this.formBuilder.group({
-      CPF: ['', Validators.required],
+      usuario: ['', Validators.required],
       novaSenha: ['', Validators.required],
       confirmaSenha: ['', Validators.required]
     });
   }
 
   onSubmit(){
-    if(!this.EsqueciForm.valid){
+    if(!this.EsqueciForm.valid || this.EsqueciForm.value.novaSenha !== this.EsqueciForm.value.confirmaSenha){
       return;
     }
     this.signin()
