@@ -2,14 +2,14 @@
     <header class="card__header">
         <h2>Realize seu depósito</h2>
     </header>
-    <form class="form" [formGroup]="depositForm">
+    <form class="form" [formGroup]="depositForm" (ngSubmit)="onSubmit()" >
         <div class="form__inputs">
             <input 
             type="date"
-            formControlName="date">
+            formControlName="data">
             <span class="highlight"></span>
             <span class="bar"></span>
-            <p *ngIf="exibeErro('date')" class="form__validation">Data é obrigatório</p>
+            <p *ngIf="exibeErro('data')" class="form__validation">Data é obrigatório</p>
         </div>
         
         <div class="form__inputs">
@@ -17,10 +17,10 @@
             <input 
             type="text" 
             id="descriptionInput"
-            formControlName="description">
+            formControlName="descricao">
             <span class="highlight"></span>
             <span class="bar"></span>
-            <p *ngIf="exibeErro('description')" class="form__validation">Descrição é obrigatório</p>
+            <p *ngIf="exibeErro('descricao')" class="form__validation">Descrição é obrigatório</p>
         </div>
 
         <div class="form__inputs">
@@ -28,10 +28,10 @@
             <input 
             type="text" 
             id="valueInput"
-            formControlName="valueTransfer">
+            formControlName="valor">
             <span class="highlight"></span>
             <span class="bar"></span>
-            <p *ngIf="exibeErro('valueTransfer')" class="form__validation">Valor é obrigatório</p>
+            <p *ngIf="exibeErro('valor')" class="form__validation">Valor é obrigatório</p>
         </div>
 
         <footer class="form__footer">
