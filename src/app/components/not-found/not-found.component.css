@@ -33,6 +33,7 @@
     justify-content: space-between;
     transition: all .5s ease-out;
     width: 80%;
+    text-decoration: none;
 }
 
 .not-found__content-link:hover {

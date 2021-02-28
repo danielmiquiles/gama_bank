@@ -8,13 +8,13 @@ import { NoAuthGuard } from './shared/guards/no-auth.guard';
 
 const routes: Routes = [
   {
-    path: '',
+    path: '#',
     loadChildren: () => import('./blocked/blocked.module').then((m) => m.BlockedModule),
     canActivate: [AuthGuard]
   },
   {
-    path: 'home',
-    loadChildren: () => import('./components/home/home.module').then((m) => m.HomeModule),
+    path: '',
+    loadChildren: () => import('./components/home/home.module').then((m) => m.HomeModule)
   },
   {
     path: 'login',
