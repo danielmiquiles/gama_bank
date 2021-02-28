@@ -67,3 +67,12 @@ ng serve -o
         <td align="center"><img src="https://avatars.githubusercontent.com/u/29305153?s=400&u=ab6c4c604d809a3d3b14172f970fc9d292a86437&v=4" width="100px;" alt=""/><br /><sub><b>Daniel Miquiles</b></sub></a><br /><a href="https://github.com/danielmiquiles" title="Code">💻</a></td>
     </tr>
 </table>
+
+<table>
+  <tr>
+        <td align="center"><a href="https://kentcdodds.com"><img src="https://avatars.githubusercontent.com/u/1500684?v=3?s=100" width="100px;" alt=""/><br /><sub><b>Kent C. Dodds</b></sub></a><br /><a href="https://github.com/testing-library/react-testing-library/commits?author=kentcdodds" title="Code">💻</a> <a href="https://github.com/testing-library/react-testing-library/commits?author=kentcdodds" title="Documentation">📖</a> <a href="#infra-kentcdodds" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/testing-library/react-testing-library/commits?author=kentcdodds" title="Tests">⚠️</a></td>
+    </tr>
+    <tr>
+        <td align="center"><a href="http://audiolion.github.io"><img src="https://avatars1.githubusercontent.com/u/2430381?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ryan Castner</b></sub></a><br /><a href="https://github.com/testing-library/react-testing-library/commits?author=audiolion" title="Documentation">📖</a></td>
+    </tr>
+</table>
