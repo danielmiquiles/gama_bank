@@ -3,19 +3,20 @@
 </h1>
 
 [![Generic badge](https://img.shields.io/badge/<status>-<completo>-<green>.svg)](https://shields.io/)
-[![All Contributors][all-contributors-badge]](#contributors)
 
 > Gama Bank é um projeto desenvolvido pelos alunos da Accenture Academy 2.0, aonde simula um banco fake.
+> Esse projeto tem uma cadastro simples de cliente, aonde ele navegar por um dashboard e acompanhar o andamento da sua conta.
 
 
-Esse projeto tem uma cadastro simples de cliente, aonde ele navegar por um dashboard e acompanhar o andamento da sua conta.
-
-
-<colocar img>
+<div align="center">
+    <img src="../assets/img/mockup.jpeg">
+</div>
 
 ## Mindmap
 
-<colocar img>
+Você acessar o mindmap dos componentes nesse link:
+
+> https://mm.tt/1800802259?t=VFdbAX8lEw
 
 ## Pré-requisitos
 
@@ -41,7 +42,11 @@ ng serve -o
 
 > https://gama-bank.vercel.app/
 
+## Organização do projeto
 
+- Para organizarmos as tarefas do projeto entre os membros do grupo, criamos um kanban simples e issues como tarefas, você pode acompanhar no link a seguir:
+
+> https://github.com/danielmiquiles/gama_bank/projects/1
 ## Tecnologias utilizadas
 
 | Tecnologia | Versão |
@@ -49,9 +54,10 @@ ng serve -o
 | Angular | v11 |
 | Typescript | v4.2 |
 | Rxjs | v6 |
-| Metologia BEM |  |
+| Metologia BEM |
 | Ngx-toastr | v13.2.0 |
 | Bootstrap-icons | v1.4.0 |
+| Git Flow |
 
 ## Contribuidores
 
