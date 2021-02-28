@@ -3,8 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { take } from 'rxjs/operators';
 
-import { AuthService } from '../../shared/services/auth.service';
-import { LoginService } from '../login/login.service';
+import { EsqueciSenhaService } from './esqueci-senha.service';
 
 @Component({
   selector: 'app-esqueci-senha',
@@ -17,10 +16,9 @@ export class EsqueciSenhaComponent implements OnInit {
   EsqueciForm: FormGroup;
 
   constructor(
-    private loginService: LoginService,
-    private authSevice: AuthService,
     private router: Router,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private esqueciSenha: EsqueciSenhaService
   ) { }
 
   ngOnInit(): void {
@@ -39,11 +37,15 @@ export class EsqueciSenhaComponent implements OnInit {
     if(!this.EsqueciForm.valid || this.EsqueciForm.value.novaSenha !== this.EsqueciForm.value.confirmaSenha){
       return;
     }
-    this.signin()
+    this.alterarSenha()
   }
 
-  signin(){
-    this.loginService.signin(this.EsqueciForm.value)
+  alterarSenha(){
+    const user = {
+      usuario: this.EsqueciForm.value.usuario,
+      senha: this.EsqueciForm.value.novaSenha
+    }
+    this.esqueciSenha.alterarSenha(user)
     .pipe(
       take(1)
     )
@@ -56,6 +58,6 @@ export class EsqueciSenhaComponent implements OnInit {
   }
 
   onSuccess(){
-    this.router.navigate(['']);
+    this.router.navigate(['/login']);
   } 
 }

@@ -1,4 +1,4 @@
 export interface EsqueciSenha{
-    ususario: string,
+    usuario: string,
     senha: string
 }
