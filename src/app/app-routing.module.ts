@@ -8,18 +8,13 @@ import { NoAuthGuard } from './shared/guards/no-auth.guard';
 
 const routes: Routes = [
   {
-    path: 'blocked',
+    path: '#',
     loadChildren: () => import('./blocked/blocked.module').then((m) => m.BlockedModule),
     canActivate: [AuthGuard]
   },
   {
-    path: 'page',
-    loadChildren: () =>
-      import('./components/page-error/page-error.module').then((m) => m.PageErrorModule),
-  },
-  {
     path: '',
-    loadChildren: () => import('./components/home/home.module').then((m) => m.HomeModule),
+    loadChildren: () => import('./components/home/home.module').then((m) => m.HomeModule)
   },
   {
     path: 'login',
