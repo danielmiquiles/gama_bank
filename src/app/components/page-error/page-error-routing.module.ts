@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PageErrorComponent } from './page-error.component';
 
 const routes: Routes = [
-  { path: 'error', component: PageErrorComponent }
+  { path: '', component: PageErrorComponent }
 ];
 
 @NgModule({

@@ -32,6 +32,10 @@ const routes: Routes = [
     component: SolicitarNovaSenhaComponent,
   },
   {
+    path: 'error',
+    loadChildren: () => import('./components/page-error/page-error.module').then(m => m.PageErrorModule)
+  },
+  {
     path: '**',
     component: NotFoundComponent,
   },
