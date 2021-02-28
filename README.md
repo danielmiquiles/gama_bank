@@ -2,19 +2,17 @@
     Gama bank
 </h1>
 
-[![Generic badge](https://img.shields.io/badge/<status>-<completo>-<green>.svg)](https://shields.io/)
-
 > Gama Bank é um projeto desenvolvido pelos alunos da Accenture Academy 2.0, aonde simula um banco fake.
 > Esse projeto tem uma cadastro simples de cliente, aonde ele navegar por um dashboard e acompanhar o andamento da sua conta.
 
 
 <div align="center">
-    <img src="../assets/img/mockup.jpeg">
+    <img src="https://github.com/danielmiquiles/gama_bank/blob/feature/plan/src/assets/img/mockup.jpeg">
 </div>
 
 ## Mindmap
 
-Você acessar o mindmap dos componentes nesse link:
+Você pode acessar o mindmap dos componentes nesse link:
 
 > https://mm.tt/1800802259?t=VFdbAX8lEw
 
