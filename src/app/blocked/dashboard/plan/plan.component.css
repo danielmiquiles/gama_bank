@@ -1,0 +1,11 @@
+.card__plan {
+    width: 20%;
+    height: auto;
+    border: 1px solid var(--bg-primary);
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.card__plan-subtitle {
+    color: var(--gray-dark);
+}

@@ -36,8 +36,6 @@
     border: none;
     border-radius: 5px;
     background-color: var(--bg-primary);
-    color: var(--white);
-    cursor: pointer;
     transition: all .5s ease-out;
     font-size: 1rem;
     font-weight: 700;
@@ -49,8 +47,15 @@
     background-color: var(--bg-primary-dark);
 }
 
+.navbar__items-logout-button,
+.navbar__items-content-title {
+    color: var(--white);
+    cursor: pointer;
+}
+
 .navbar__items-content-title {
     margin-left: 0.9rem;
+    text-decoration: none;
 }
 
 @media screen and (min-width: 1200px) {
