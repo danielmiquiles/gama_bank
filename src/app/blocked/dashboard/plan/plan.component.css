@@ -3,11 +3,23 @@
     border: 1px solid var(--bg-primary);
     border-radius: 5px;
     padding: 1rem;
-    display: flex;
-    flex-direction: column;
     margin-top: 1rem;
 }
 
 .card__plan-subtitle {
     color: var(--gray-dark);
+}
+
+@media screen and (min-width: 748px) {
+    .card {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .card {
+        width: 59vw;
+    }
 }
