@@ -45,6 +45,7 @@
     font-size: 1rem;
     justify-content: space-between;
     padding: 1rem;
+    text-decoration: none;
 }
 
 @media screen and (min-width: 768px) {

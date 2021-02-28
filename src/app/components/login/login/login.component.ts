@@ -68,7 +68,7 @@ export class LoginComponent implements OnInit {
   } 
 
   onError(error: any) {
-    this.toastr.error('Nome do usuário incorreto', 'Tente outra vez!', error);
+    this.toastr.error('Nome do usuário ou senha incorreto', 'Tente outra vez!', error);
     this.isSpinner = false;
     this.router.navigate(['/error'])
   }
