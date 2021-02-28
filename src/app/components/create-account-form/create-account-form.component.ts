@@ -66,20 +66,19 @@ export class CreateAccountFormComponent implements OnInit {
       "cpf": this.userForm.value.cpf,
       "senha": this.userForm.value.password,
     }
+    this.isSpinner = true;
     this.createAccountService.createUser(user)
     .pipe(
       finalize(() => this.isLoading = false)
-      )
-      .subscribe(
-        response => this.onSuccess(),
-        error => this.onError(error)
-        )
-        console.log('criei')
+    )
+    .subscribe(
+      response => this.onSuccess(),
+      error => this.onError(error)
+    )
   }
       
   onSuccess() {
-    this.router.navigate[('/login')]
-
+    this.router.navigate(['/login'])
   }
 
   onError(error: any) {
