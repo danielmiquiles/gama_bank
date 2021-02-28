@@ -43,7 +43,6 @@ export class DepositComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.depositForm.value);
     const lancamento = {
       descricao: String(this.depositForm.value.descricao),
       data: this.depositForm.value.data,
@@ -61,7 +60,6 @@ export class DepositComponent implements OnInit {
   }
 
   onSubmitSuccess(response: string){
-    console.log(response);
     this.depositForm.reset();
   }
 
