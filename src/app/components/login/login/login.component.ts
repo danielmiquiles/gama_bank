@@ -64,7 +64,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSuccess(){
-    this.router.navigate(['/blocked']);
+    this.router.navigate(['/dashboard']);
   } 
 
 }
