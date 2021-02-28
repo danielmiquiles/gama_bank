@@ -95,7 +95,6 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
 .highlight {
     position:absolute;
     height:60%; 
-    width:100%; 
     top:25%; 
     left:0;
     pointer-events:none;
@@ -155,6 +154,7 @@ input:focus ~ .highlight {
 .card__strong-title,
 .card__title--green {
     font-size: 1rem;
+    transition: all .5s ease-out;
 }
 
 .card__strong-title,
@@ -173,8 +173,19 @@ input:focus ~ .highlight {
     justify-content: space-between;
 }
 
+.form__button-spinner {
+    width: 7%;
+}
+
 @media screen and (min-width: 748px) {
     .card__span {
         margin-left: 2%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .card--dimension {
+        width: 20vw;
+        height: 24vh;
     }
 }

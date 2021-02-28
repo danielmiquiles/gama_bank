@@ -3,8 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { take } from 'rxjs/operators';
 
-import { LoginService } from '../components/login/login.service';
-import { AuthService } from '../shared/services/auth.service';
+import { AuthService } from '../../shared/services/auth.service';
+import { LoginService } from '../login/login.service';
 
 @Component({
   selector: 'app-esqueci-senha',

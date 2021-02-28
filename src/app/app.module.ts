@@ -7,8 +7,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { EsqueciSenhaComponent } from './components/esqueci-senha/esqueci-senha.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { EsqueciSenhaComponent } from './esqueci-senha/esqueci-senha.component';
 import { SharedModule } from './shared/shared.module';
 import { SolicitarNovaSenhaComponent } from './solicitar-nova-senha/solicitar-nova-senha.component';
 

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { User } from './../interfaces/user.interface';
 
@@ -6,7 +7,9 @@ import { User } from './../interfaces/user.interface';
   providedIn: 'root',
 })
 export class AuthService {
-  constructor() {}
+  constructor(
+    private router: Router
+  ) {}
 
   usuario: User;
   token: string;
@@ -49,6 +52,7 @@ export class AuthService {
     return this.getUsuario() && this.getToken() ? true : false;
   }
 
+
   setNewsenha(response: string){
     console.log(response);    
     localStorage.setItem('Senha Provisoria',response)
@@ -58,4 +62,10 @@ export class AuthService {
     return localStorage.getItem('Senha Provisoria')
   }
 
+  logout() {
+    this.usuario = null;
+    this.token = null;
+    localStorage.clear();
+    this.router.navigate(['/login'])
+  }
 }

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BlockedComponent } from './blocked.component';
+import { EsqueciSenhaComponent } from './esqueci-senha.component';
 
-describe('BlockedComponent', () => {
-  let component: BlockedComponent;
-  let fixture: ComponentFixture<BlockedComponent>;
+describe('EsqueciSenhaComponent', () => {
+  let component: EsqueciSenhaComponent;
+  let fixture: ComponentFixture<EsqueciSenhaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BlockedComponent ]
+      declarations: [ EsqueciSenhaComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BlockedComponent);
+    fixture = TestBed.createComponent(EsqueciSenhaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

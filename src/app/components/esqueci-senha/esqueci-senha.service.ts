@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { AuthService } from 'src/app/shared/services/auth.service';
 import { environment } from 'src/environments/environment';
 
-import { EsqueciSenha } from '../shared/interfaces/esqueciSenha.interface';
-import { AuthService } from '../shared/services/auth.service';
+import { EsqueciSenha } from './../../shared/interfaces/esqueciSenha.interface';
 
 @Injectable({
   providedIn: 'root',

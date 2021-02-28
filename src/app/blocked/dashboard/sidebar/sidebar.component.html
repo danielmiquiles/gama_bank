@@ -1,15 +1,15 @@
 <nav class="navbar">
-    <!-- <header class="navbar__header">
-        <img src="../../../../assets/img/logo-mini.png" class="navbar__header-logo" alt="Logo minificado gama academy">
-    </header> -->
+    <header class="navbar__header">
+       <a routerLink="/#/dashboard/accounts"><img src="../../../../assets/img/logo-mini.png" class="navbar__header-logo" alt="Logo minificado gama academy"></a> 
+    </header>
     <ul class="navbar__items">
         <li class="navbar__items-content">
             <img src="../../../../assets/img/pix.svg" alt="Icone do pix">
-            <p class="navbar__items-content-title">Depósitos</p>
+            <a class="navbar__items-content-title">Depósitos</a>
         </li>
         <li class="navbar__items-content">
             <img src="../../../../assets/img/pix.svg" alt="Icone do pix">
-            <p class="navbar__items-content-title">Planos</p>
+            <a routerLink="/#/dashboard/plan" class="navbar__items-content-title">Planos</a>
         </li>
         <li class="navbar__items-content">
             <img src="../../../../assets/img/pix.svg" alt="Icone do pix">
@@ -18,6 +18,9 @@
         <li class="navbar__items-content">
             <img src="../../../../assets/img/pix.svg" alt="Icone do pix">
             <p class="navbar__items-content-title">Transações</p>
+        </li>
+        <li class="navbar__items-logout">
+            <button (click)="logout()" class="navbar__items-logout-button">Sair</button>
         </li>
     </ul>
 </nav>

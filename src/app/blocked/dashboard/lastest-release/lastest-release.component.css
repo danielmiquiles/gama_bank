@@ -19,3 +19,10 @@
         justify-content: space-between;
     }
 }
+
+@media screen and (min-width: 1200px) {
+    .card--height {
+        height: 35vh;
+        width: 58vw;
+    }
+}

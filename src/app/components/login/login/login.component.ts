@@ -14,6 +14,7 @@ import { LoginService } from './../login.service';
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
+  isSpinner = false;
 
   constructor(
     private loginService: LoginService,
@@ -37,8 +38,17 @@ export class LoginComponent implements OnInit {
     if(!this.loginForm.valid){
       return;
     }
+    this.isSpinner = true;
     this.signin()
   }
+
+  exibeErro(nomeControle: string) {
+    if (!this.loginForm.get(nomeControle)) {
+      return false;
+    }
+    return this.loginForm.get(nomeControle).invalid && this.loginForm.get(nomeControle).touched;
+  }
+
 
   signin(){
     this.loginService.signin(this.loginForm.value)
@@ -54,7 +64,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSuccess(){
-    this.router.navigate(['/blocked']);
+    this.router.navigate(['/#/dashboard/accounts']);
   } 
 
 }
