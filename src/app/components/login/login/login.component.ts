@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { take } from 'rxjs/operators';
 
 import { AuthService } from './../../../shared/services/auth.service';
@@ -20,7 +21,8 @@ export class LoginComponent implements OnInit {
     private loginService: LoginService,
     private authSevice: AuthService,
     private router: Router,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private toastr: ToastrService
   ) { }
 
   ngOnInit(): void {
@@ -57,14 +59,18 @@ export class LoginComponent implements OnInit {
     )
     .subscribe(
       _response => this.onSuccess(),
-      error => {        
-        console.log(error);
-      },
+      error => this.onError(error),
     )
   }
 
   onSuccess(){
     this.router.navigate(['/#/dashboard/accounts']);
   } 
+
+  onError(error: any) {
+    this.toastr.error('Nome do usuário incorreto', 'Tente outra vez!', error);
+    this.isSpinner = false;
+    this.router.navigate(['/error'])
+  }
 
 }

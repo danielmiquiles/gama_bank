@@ -22,6 +22,10 @@ const routes: Routes = [
     canActivate: [NoAuthGuard]
   },
   {
+    path: 'error',
+    loadChildren: () => import('./components/page-error/page-error.module').then(m => m.PageErrorModule)
+  },
+  {
     path: '**',
     component: NotFoundComponent,
   },
