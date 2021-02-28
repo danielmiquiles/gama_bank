@@ -3,7 +3,7 @@
 </h1>
 
 > Gama Bank é um projeto desenvolvido pelos alunos da Accenture Academy 2.0, aonde simula um banco fake.
-> Esse projeto tem uma cadastro simples de cliente, aonde ele navegar por um dashboard e acompanhar o andamento da sua conta.
+> Esse projeto tem uma cadastro simples de cliente, aonde ele navegar por um dashboard e acompanha o andamento da sua conta.
 
 
 <div align="center">
@@ -29,7 +29,7 @@ Para instalar e rodar esse projeto você precisa de:
 
 ## Instalação e rodando projeto localmente
 
-> dentro da página gama-bank
+> Dentro da página gama-bank
 
 ```sh
 npm install
