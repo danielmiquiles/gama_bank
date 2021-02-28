@@ -9,6 +9,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LastestReleaseComponent } from './lastest-release/lastest-release.component';
 import { PlanComponent } from './plan/plan.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { AccountsComponent } from './accounts/accounts.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     AccountCreditComponent, 
     LastestReleaseComponent, 
     SidebarComponent,
-    PlanComponent
+    PlanComponent,
+    AccountsComponent
   ],
   imports: [
     RouterModule,
