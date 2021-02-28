@@ -34,7 +34,7 @@ export class DepositService {
   }
 
   deposit(lancamento: Lancamentos){
-    const conta = this.authService.getConta();
+    const conta = this.authService.getContaCredito();
     const user = this.authService.getUsuario();
     const info = {
       conta: conta.id,
@@ -48,7 +48,6 @@ export class DepositService {
     let headers = new HttpHeaders({
       'Authorization': this.authService.getToken()
     });
-    let params = new HttpParams().set('login', user.login);
     let httpOptions = {
       headers: headers,
     };
