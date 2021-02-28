@@ -11,20 +11,21 @@ import { AuthService } from '../shared/services/auth.service';
   providedIn: 'root',
 })
 export class SolicitarNovaSenhaService {
-    API_URL = environment.API_URL;
+  API_URL = environment.API_URL;
 
-    constructor(
-        private http: HttpClient, 
-        private authService: AuthService,
-        private router: Router) {}
-        
+  constructor(
+    private http: HttpClient,
+    private authService: AuthService,
+    private router: Router
+  ) {}
+
   solicitarNewSenha(novaSenha: NovaSenha) {
-            return this.http.post<string>(`${this.API_URL}/nova-senha`, novaSenha)
-            .pipe(
-              tap((response) => {
-                this.authService.setNewsenha(response);
-                this.router.navigate(['/esqueci-senha'])
-              })
-            );
-          }
+    return this.http.post<string>(`${this.API_URL}/nova-senha`, novaSenha)
+    .pipe(
+      tap((response) => {
+        this.authService.setNewsenha(response);
+        this.router.navigate(['/esqueci-senha']);
+      })
+    );
+  }
 }

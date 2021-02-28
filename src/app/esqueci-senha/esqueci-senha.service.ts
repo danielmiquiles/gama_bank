@@ -1,29 +1,24 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { tap } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 
-import { Esqueci } from '../shared/interfaces/esqueci.interface';
+import { EsqueciSenha } from '../shared/interfaces/esqueciSenha.interface';
 import { AuthService } from '../shared/services/auth.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EsqueciSenhaService {
-    API_URL = environment.API_URL;
+  API_URL = environment.API_URL;
 
-    constructor(
-        private http: HttpClient, 
-        private authService: AuthService) {}
-        
-        signin(usuario: Esqueci) {
-            return this.http.post<ResponseAPI>(`${this.API_URL}/altera-senha`, usuario)
-            .pipe(
-              tap((response) => {
-                this.authService.setUsuario(response.usuario);
-                this.authService.setToken(response.token);
-              })
-            );
-          }
+  constructor(private http: HttpClient, private authService: AuthService) {}
+
+  signin(usuario: EsqueciSenha) {
+    const user = this.authService.getUsuario();
+    return this.http.post(`${this.API_URL}/altera-senha`, usuario, {
+      params: {
+        login: user.login,
+      },
+    });
+  }
 }
-

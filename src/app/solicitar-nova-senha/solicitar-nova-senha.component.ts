@@ -27,7 +27,7 @@ export class SolicitarNovaSenhaComponent implements OnInit {
   criarNovaSenha() {
     this.newSenhaForm = this.formBuilder.group({
       login: ['', Validators.required],
-      cpf: ['', Validators.required],
+      email: ['', Validators.required],
     });
   }
 
@@ -36,6 +36,7 @@ export class SolicitarNovaSenhaComponent implements OnInit {
   }
 
   solicitarNewSenha(){
+    console.log(this.newSenhaForm.value);    
     this.solicitarNovaSenhaService.solicitarNewSenha(this.newSenhaForm.value)
     .pipe(
       take(1)

@@ -50,7 +50,12 @@ export class AuthService {
   }
 
   setNewsenha(response: string){
+    console.log(response);    
     localStorage.setItem('Senha Provisoria',response)
+  }
+
+  getNewsenha(){
+    return localStorage.getItem('Senha Provisoria')
   }
 
 }
