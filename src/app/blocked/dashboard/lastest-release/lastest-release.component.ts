@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { LancamentosRes } from './../../../shared/interfaces/lancamentosRes.interface';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-lastest-release',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LastestReleaseComponent implements OnInit {
 
+  @Input() transacoes: LancamentosRes[];
+  @Input() transacoesCredito: LancamentosRes[];
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {  
+  }
+
+  ngOnChanges(changes) {    
   }
 
 }

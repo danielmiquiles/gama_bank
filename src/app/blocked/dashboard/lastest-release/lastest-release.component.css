@@ -22,7 +22,12 @@
 
 @media screen and (min-width: 1200px) {
     .card--height {
-        height: 35vh;
+        max-height: 35vh;
         width: 58vw;
+        overflow: auto;
+        scrollbar-width: none;      
+    }
+    .card--height::-webkit-scrollbar{
+        display: none
     }
 }

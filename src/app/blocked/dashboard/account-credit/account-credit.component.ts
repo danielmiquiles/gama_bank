@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-account-credit',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./account-credit.component.css']
 })
 export class AccountCreditComponent implements OnInit {
+
+  @Input() saldo: number
+  transacoes = 0
 
   constructor() { }
 

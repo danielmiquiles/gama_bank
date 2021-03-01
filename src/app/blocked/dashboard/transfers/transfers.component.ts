@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Plans } from 'src/app/shared/interfaces/plans';
 
 import { TransferService } from './transfer.service';
@@ -19,7 +20,8 @@ export class TransfersComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private transferService: TransferService,
-    private router: Router
+    private router: Router,
+    private toastr: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -53,16 +55,23 @@ export class TransfersComponent implements OnInit {
       conta: 0,
       login: ''      
     }
-
+    this.isSpinner = true;
+    
     this.transferService.transfer(lancamento)
     .subscribe(
       response => this.onSubmitSuccess(response),
-      error => console.error(error),
+      error => this.onError(error),
     )
   }
-
+  
   onSubmitSuccess(response: string){
     this.transferForm.reset();
+    this.toastr.success('Parabéns!', 'Você fez uma transferência')
+  }
+
+  onError(error: any) {
+    this.isSpinner = false;
+    this.toastr.error('Algo deu errado', 'Tente novamente!');
   }
 
   getPlansAccount() {
