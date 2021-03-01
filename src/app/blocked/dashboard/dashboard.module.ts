@@ -26,7 +26,7 @@ import { TransfersComponent } from './transfers/transfers.component';
     DepositComponent,
     PlanComponent,
     AccountsComponent,
-    CreatePlanComponent
+    CreatePlanComponent,
     TransfersComponent
   ],
   imports: [
