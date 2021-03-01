@@ -1,0 +1,66 @@
+<section class="card">
+    <form class="form" [formGroup]="planForm" (ngSubmit)="onSubmit()">
+        <header class="form__header">
+          <h2>Crie um plano de conta</h2>
+        </header>
+    
+        <div class="form__inputs">
+            <label for="descriptionInput">Descrição</label>
+          <input
+            type="text"
+            name="descriptionInput"
+            formControlName="description"
+          />
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <p *ngIf="exibeErro('description')" class="form__validation">Descrição inválido</p>
+        </div>
+
+        <div class="form__inputs">
+            <label for="loginIput">Usuário</label>
+          <input
+            type="text"
+            name="loginIput"
+            formControlName="login"
+          />
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <p *ngIf="exibeErro('login')" class="form__validation">Usuário inválido</p>
+        </div>
+    
+        <div class="form__inputs">
+            <label for="tipoMovimentoInput">Tipo de movimento</label>
+          <input
+            type="text"
+            name="tipoMovimentoInput"
+            formControlName="typeMoviment"
+          />
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <p *ngIf="exibeErro('typeMoviment')" class="form__validation">Tipo de movimento inválido</p>
+        </div>
+    
+        <footer class="form__footer">
+          <button
+          type="submit"
+          class="form__button form__button--disabled"
+        >
+          Criar
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-arrow-right"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+            />
+          </svg>
+          <img src="../../../../assets/img/spinner.gif" alt="Gif de spinner" class="form__button-spinner" class="form__button-spinner " *ngIf="isSpinner">
+        </button>
+        </footer>
+      </form>
+</section>

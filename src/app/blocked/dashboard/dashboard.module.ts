@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { AccountCreditComponent } from './account-credit/account-credit.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { CardComponent } from './card/card.component';
+import { CreatePlanComponent } from './create-plan/create-plan.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DepositComponent } from './deposit/deposit.component';
@@ -13,7 +14,6 @@ import { LastestReleaseComponent } from './lastest-release/lastest-release.compo
 import { PlanComponent } from './plan/plan.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { TransfersComponent } from './transfers/transfers.component';
-
 
 
 @NgModule({
@@ -26,6 +26,7 @@ import { TransfersComponent } from './transfers/transfers.component';
     DepositComponent,
     PlanComponent,
     AccountsComponent,
+    CreatePlanComponent
     TransfersComponent
   ],
   imports: [
