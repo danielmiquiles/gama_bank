@@ -61,6 +61,14 @@
     text-decoration: none;
 }
 
+@media screen and (min-width: 768px) {
+    .navbar__header-logo {
+        width: 5vw;
+        padding: 5%;
+        margin-left: 1rem;
+    }
+}
+
 @media screen and (min-width: 1200px) {
     .navbar {
         height: 100%;
