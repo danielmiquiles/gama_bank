@@ -6,18 +6,17 @@
         </a>
       </div>
       <div class="login__card">
-        <form class="form" [formGroup]="EsqueciForm" (ngSubmit)="onSubmit()">
+        <form class="form" [formGroup]="newSenhaForm" (ngSubmit)="onSubmit()">
           <header class="form__header">
-            <h2>Esqueci minha senha</h2>
-            <h4>Confirme seu CPF e escolha sua nova senha.</h4>
+            <h2>Solicitar nova senha</h2>
           </header>
-          
+  
           <div class="form__inputs">
             <input
               type="text"
-              placeholder="Confirme seu usuario"
-              name="usuario"
-              formControlName="usuario"
+              placeholder="Digite seu usuário" 
+              name="login"
+              formControlName="login"
             />
             <span class="highlight"></span>
             <span class="bar"></span>
@@ -25,32 +24,22 @@
   
           <div class="form__inputs">
             <input
-              type="Password"
-              placeholder="Digite sua nova senha"
-              name="novaSenha"
-              formControlName="novaSenha"
+              type="text"
+              placeholder="Digite um email"
+              name="email"
+              formControlName="email"
             />
             <span class="highlight"></span>
             <span class="bar"></span>
-          </div>
-
-          <div class="form__inputs">
-            <input
-              type="Password"
-              placeholder="Confirme sua nova senha"
-              name="confirmaSenha"
-              formControlName="confirmaSenha"
-            />
-            <span class="highlight"></span>
-            <span class="bar"></span>
+            <!-- <p *ngIf="exibeErro('password')" class="form__validation">Senha inválida</p> -->
           </div>
   
           <button
             type="submit"
             class="form__button form__button--disabled"
-            [disabled]="EsqueciForm.invalid"
+            [disabled]="newSenhaForm.invalid"
           >
-            Enviar
+            Continuar
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -65,6 +54,7 @@
               />
             </svg>
           </button>
+  
         </form>
       </div>
     </main>

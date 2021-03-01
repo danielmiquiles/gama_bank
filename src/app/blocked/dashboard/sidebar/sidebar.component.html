@@ -5,20 +5,21 @@
     <ul class="navbar__items">
         <li class="navbar__items-content">
             <img src="../../../../assets/img/pix.svg" alt="Icone do pix">
-            <a class="navbar__items-content-title">Depósitos</a>
+            <a routerLink="/#/dashbord" class="navbar__items-content-title">Home</a>
         </li>
         <li class="navbar__items-content">
             <img src="../../../../assets/img/pix.svg" alt="Icone do pix">
-            <a routerLink="/#/dashboard/plan" class="navbar__items-content-title">Planos</a>
+            <a routerLink="deposit" class="navbar__items-content-title">Depósitos</a>
         </li>
         <li class="navbar__items-content">
             <img src="../../../../assets/img/pix.svg" alt="Icone do pix">
-            <p class="navbar__items-content-title">Pagamentos</p>
+            <a routerLink="plan" class="navbar__items-content-title">Planos</a>
         </li>
         <li class="navbar__items-content">
             <img src="../../../../assets/img/pix.svg" alt="Icone do pix">
-            <p class="navbar__items-content-title">Transações</p>
+            <a routerLink="transfers" class="navbar__items-content-title">Transferências</a>
         </li>
+        
         <li class="navbar__items-logout">
             <button (click)="logout()" class="navbar__items-logout-button">Sair</button>
         </li>
