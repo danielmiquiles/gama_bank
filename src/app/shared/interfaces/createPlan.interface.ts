@@ -1,7 +1,9 @@
+import { Login } from './login.interface';
+
 export interface CreatePlan  {
     descricao: string,
     id?: number,
-    login: string,
+    login: Login,
     padrao?: true,
     tipoMovimento: string
 }

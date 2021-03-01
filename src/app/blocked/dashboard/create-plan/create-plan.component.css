@@ -29,3 +29,9 @@
 .form__inputs {
     margin-top: 2rem;
 }
+
+@media screen and (min-width: 1200px) {
+    .card {
+        width: 59vw;
+    }
+}

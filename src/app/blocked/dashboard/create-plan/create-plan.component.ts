@@ -47,7 +47,7 @@ export class CreatePlanComponent implements OnInit {
     }
     return this.planForm.get(nomeControle).invalid && this.planForm.get(nomeControle).touched;
   }
-
+  
   onSubmit() {
     if (this.planForm.invalid) {
       this.validateAllFormFields();
