@@ -2,6 +2,6 @@ export interface CreatePlan  {
     descricao: string,
     id?: number,
     login: string,
-    padrao: true,
+    padrao?: true,
     tipoMovimento: string
 }
