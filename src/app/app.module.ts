@@ -13,7 +13,6 @@ import { EsqueciSenhaComponent } from './components/esqueci-senha/esqueci-senha.
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { SolicitarNovaSenhaComponent } from './components/solicitar-nova-senha/solicitar-nova-senha.component';
 import { SharedModule } from './shared/shared.module';
-import { TransfersComponent } from './components/transfers/transfers/transfers.component';
 
 registerLocaleData(localePt);
 
@@ -23,7 +22,6 @@ registerLocaleData(localePt);
     EsqueciSenhaComponent, 
     SolicitarNovaSenhaComponent,
     NotFoundComponent,
-    TransfersComponent,
   ],
 
   imports: [
