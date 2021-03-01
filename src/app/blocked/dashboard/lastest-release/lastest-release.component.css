@@ -25,6 +25,9 @@
         max-height: 35vh;
         width: 58vw;
         overflow: auto;
-        
+        scrollbar-width: none;      
+    }
+    .card--height::-webkit-scrollbar{
+        display: none
     }
 }
