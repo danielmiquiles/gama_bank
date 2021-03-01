@@ -11,7 +11,13 @@ const routes: Routes = [
   {
     path: '',
     component: DashboardComponent,
-    children: [{
+    children: [
+      {
+        path: '',
+        redirectTo: 'accounts',
+        pathMatch: 'full'
+      },
+      {
       path: 'plan',
       component: PlanComponent
     },
