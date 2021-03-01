@@ -119,9 +119,11 @@ button {
   font-size: 0.8rem;
   text-decoration: none;
   margin: 0.4rem;
+  transition: all .5s ease-out;
 }
 .login__link:hover {
   text-decoration: underline;
+  color: var(--bg-secundary);
 }
 .login__link--purple {
   color: var(--bg-primary);
