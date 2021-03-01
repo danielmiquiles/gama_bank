@@ -5,7 +5,8 @@
 }
 
 .navbar__header-logo {
-   display: none;
+   width: 18vw;
+   margin-top: 20%;
 }
 
 .navbar__items {

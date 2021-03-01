@@ -1,6 +1,7 @@
 .error {
     background-color: var(--bg-primary);
     height: 100vh;
+    overflow: hidden;
 }
 
 .error__header {
@@ -9,7 +10,7 @@
 
 .error__card {
     display: grid;
-    height: 100vh;
+    height: 80vh;
     place-items: center;
 }
 
@@ -42,9 +43,9 @@
     border-radius: 20px;
     color: var(--white);
     display: flex;
-    font-size: 1rem;
+    font-size: 0.9rem;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 0.9rem;
     text-decoration: none;
 }
 
