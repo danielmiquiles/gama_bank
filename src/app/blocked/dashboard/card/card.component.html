@@ -4,9 +4,9 @@
         <h2 class="card__span">Conta</h2>
     </header>
     <h3 class="card__title">Saldo disponivel</h3>
-    <strong><h2>R$ 10.000,00</h2></strong>
+    <strong><h2>{{ saldo | currency: 'BRL'}}</h2></strong>
     <footer class="card__footer">
         <h3 class="card__title">Transações</h3>
-        <h2 class="card__title--green">R$2.120,47</h2>
+        <h2 class="card__title--green">{{ transacoes | currency: 'BRL' }}</h2>
     </footer>
 </section>
