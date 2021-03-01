@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { finalize } from 'rxjs/operators';
 import { Plans } from 'src/app/shared/interfaces/plans';
 
 import { DepositService } from './deposit.service';
@@ -19,7 +21,8 @@ export class DepositComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private depositService: DepositService,
-    private router: Router
+    private router: Router,
+    private toastr: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -51,16 +54,25 @@ export class DepositComponent implements OnInit {
       conta: 0,
       login: ''      
     }
+    this.isSpinner = true;
 
     this.depositService.deposit(lancamento)
+    .pipe(
+      finalize( () => this.isSpinner = false)
+    )
     .subscribe(
       response => this.onSubmitSuccess(response),
-      error => console.error(error),
+      error => this.onError(error)
     )
   }
 
   onSubmitSuccess(response: string){
     this.depositForm.reset();
+    this.toastr.success('Você fez um depósito', 'Parabéns!')
+  }
+
+  onError(error: any) {
+    this.toastr.error('Algo deu errado', 'Tente novamente!');
   }
 
   getPlansAccount() {
