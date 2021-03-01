@@ -1,3 +1,5 @@
+import { ContaCredito } from './../../../shared/interfaces/contaCredito.interface';
+import { LancamentosRes } from './../../../shared/interfaces/lancamentosRes.interface';
 import { Component, OnInit } from '@angular/core';
 
 import { DashboardService } from './../dashboard.service';
@@ -15,7 +17,10 @@ export class AccountsComponent implements OnInit {
   inicio: string;
   fim: string;
   saldo: number
-  visible: boolean;
+  saldoCredito: number
+  transacoesConta: LancamentosRes
+  transacoesContaCredito: LancamentosRes
+  
 
   ngOnInit(): void {
 
@@ -24,7 +29,6 @@ export class AccountsComponent implements OnInit {
     this.inicio = this.data(data.getFullYear(), data.getMonth(), 1);
     this.fim = this.data(ultimoDia.getFullYear(), ultimoDia.getMonth(), ultimoDia.getDate());
     this.getDashboardInfos();
-    this.visible = this.dashboardService.toggle();
   }
 
   data(ano, mes, dia): string{
@@ -44,12 +48,10 @@ export class AccountsComponent implements OnInit {
     )
   }
 
-  onSuccess(response){
-    console.log(response);    
+  onSuccess(response){    
     this.saldo = response.contaBanco.saldo
+    this.saldoCredito = response.contaCredito.saldo
+    this.transacoesConta = response.contaBanco.lancamentos
+    this.transacoesContaCredito = response.contaCredito.lancamentos
   }
-
-
-
-
 }

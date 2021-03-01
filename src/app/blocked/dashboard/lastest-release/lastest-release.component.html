@@ -3,14 +3,14 @@
         <i><img src="../../../../assets/img/money.svg" alt="Icone de dinheiro"></i>
         <h4 class="card__span">Último lançamento</h4>
     </header>
-    <article class="card__information">
+    <article class="card__information" *ngFor="let transacao of transacoes" >
         <section class="card__information-wallet">
-            <strong>Compra no débito</strong>
-            <p class="card__title">GamaAcademy</p>
-            <p class="card__information-money">r$: 298,55</p>
+            <strong>{{ transacao.planoConta.descricao }}</strong>
+            <p class="card__title">{{ transacao.descricao }}</p>
+            <p class="card__information-money">{{ transacao.valor | currency: 'BRL'}}</p>
         </section>
         <footer>
-            <p class="card-information-date">Dia  24 de Jan.</p>
+            <p class="card-information-date">{{ transacao.data | date: '\'Dia\' dd \'de\' MMM'}}</p>
         </footer>
     </article>
 </section>

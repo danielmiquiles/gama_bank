@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { finalize } from 'rxjs/operators';
 import { Plans } from 'src/app/shared/interfaces/plans';
 
 import { DepositService } from './deposit.service';
@@ -56,6 +57,9 @@ export class DepositComponent implements OnInit {
     this.isSpinner = true;
 
     this.depositService.deposit(lancamento)
+    .pipe(
+      finalize( () => this.isSpinner = false)
+    )
     .subscribe(
       response => this.onSubmitSuccess(response),
       error => this.onError(error)
@@ -68,7 +72,6 @@ export class DepositComponent implements OnInit {
   }
 
   onError(error: any) {
-    this.isSpinner = false;
     this.toastr.error('Algo deu errado', 'Tente novamente!');
   }
 

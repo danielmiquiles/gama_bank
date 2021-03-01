@@ -5,34 +5,31 @@ import { AuthService } from 'src/app/shared/services/auth.service';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DashboardService {
-
   API_URL = environment.API_URL;
   visible = true;
 
-  constructor(
-    private http: HttpClient,
-    private authService: AuthService
-  ) { }
+  constructor(private http: HttpClient, private authService: AuthService) {}
 
-  getDashboardInfos(inicio: string, fim: string){
+  getDashboardInfos(inicio: string, fim: string) {
     const user = this.authService.getUsuario();
-    return this.http.get<ResponseDash>(`${this.API_URL}/dashboard`,{
-      headers:{
-        Authorization: this.authService.getToken()
+    return this.http.get<ResponseDash>(`${this.API_URL}/dashboard`, {
+      headers: {
+        Authorization: this.authService.getToken(),
       },
-      params:{
+      params: {
         inicio: inicio,
         fim: fim,
-        login: user.login
-      }
-    })
+        login: user.login,
+      },
+    });
   }
 
-  toggle(){
-    return !this.visible;    
+  toggle(): boolean {
+    console.log(!this.visible);
+    this.visible = !this.visible;
+    return this.visible;
   }
-
 }

@@ -1,3 +1,4 @@
+import { DashboardService } from './../dashboard.service';
 import { Component, Input, OnInit, Output } from '@angular/core';
 import * as EventEmitter from 'events';
 import { User } from 'src/app/shared/interfaces/user.interface';
@@ -12,18 +13,19 @@ export class DashboardComponent implements OnInit {
 
   user: User
   @Input() show = true;
-  @Output() visibleEvent = new EventEmitter();
+  visible: boolean;
 
   constructor(
-    private authService: AuthService
+    private authService: AuthService,
+    private dashboardService: DashboardService
   ) { }
 
   ngOnInit(): void {
     this.user = this.authService.getUsuario()
   }
 
-  visible(show) {
-    this.visibleEvent.emit(show);
+  toggle() {
+    this.visible = this.dashboardService.toggle()
   }
 
 }

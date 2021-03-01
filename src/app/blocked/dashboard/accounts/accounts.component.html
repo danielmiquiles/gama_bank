@@ -1,7 +1,7 @@
 <section>
     <section class="dash__money">
-      <app-card [saldo]="saldo" [inicio]="inicio" [fim]="fim" class="dash__card"></app-card>
-      <app-account-credit class="dash__card dash__card--width"></app-account-credit>
+      <app-card [saldo]="saldo" class="dash__card"></app-card>
+      <app-account-credit [saldo]="saldoCredito" class="dash__card dash__card--width"></app-account-credit>
     </section>
-    <app-lastest-release></app-lastest-release>
+    <app-lastest-release [transacoes]="transacoesConta"></app-lastest-release>
 </section>
