@@ -2,10 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { tap } from 'rxjs/operators';
+import { NovaSenha } from 'src/app/shared/interfaces/novaSenha.interface';
+import { AuthService } from 'src/app/shared/services/auth.service';
 import { environment } from 'src/environments/environment';
-
-import { NovaSenha } from '../shared/interfaces/novaSenha.interface';
-import { AuthService } from '../shared/services/auth.service';
 
 @Injectable({
   providedIn: 'root',

@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { BlockedRoutingModule } from './blocked-routing.module';
 import { BlockedComponent } from './blocked.component';
+import { TransfersComponent } from './transfers/transfers/transfers.component';
 
 
 @NgModule({
   declarations: [
-    BlockedComponent, 
+    BlockedComponent,
+    TransfersComponent, 
   ],
   imports: [
     CommonModule,
