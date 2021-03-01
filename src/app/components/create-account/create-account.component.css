@@ -64,14 +64,14 @@
     }
 
     .home {
-        background: url('../../../assets/img/happyhappy.png') no-repeat center 10rem var(--bg-primary);
+        background: url('../../../assets/img/happy.svg') no-repeat center 10rem var(--bg-primary);
     }
 }
 
 @media screen and (min-width: 1200px) {
 
     .home {
-        background: url('../../../assets/img/happyhappy.png') no-repeat center 9rem var(--bg-primary);
+        background: url('../../../assets/img/happy.svg') no-repeat center 9rem var(--bg-primary);
     }
 
     .home__presentation {
