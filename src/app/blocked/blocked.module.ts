@@ -7,7 +7,7 @@ import { BlockedComponent } from './blocked.component';
 
 @NgModule({
   declarations: [
-    BlockedComponent, 
+    BlockedComponent,
   ],
   imports: [
     CommonModule,

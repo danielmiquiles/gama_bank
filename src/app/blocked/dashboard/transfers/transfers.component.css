@@ -1,0 +1,20 @@
+.card--width {
+    width: 70%;    
+}
+
+.form__inputs {
+    margin-top: 2rem;
+}
+
+.form__button--dimension {
+    width: 50%;
+}
+
+.form__footer {
+    display: flex;
+    justify-content: center;
+}
+
+.ng-invalid.ng-touched {
+    color: var(--red);
+}

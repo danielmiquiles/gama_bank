@@ -3,9 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { EsqueciSenhaComponent } from './components/esqueci-senha/esqueci-senha.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { SolicitarNovaSenhaComponent } from './components/solicitar-nova-senha/solicitar-nova-senha.component';
 import { AuthGuard } from './shared/guards/auth.guard';
 import { NoAuthGuard } from './shared/guards/no-auth.guard';
-import { SolicitarNovaSenhaComponent } from './solicitar-nova-senha/solicitar-nova-senha.component';
+
 
 
 const routes: Routes = [

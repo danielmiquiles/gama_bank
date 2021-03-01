@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { Conta } from './../interfaces/conta.interface';
+import { ContaCredito } from './../interfaces/contaCredito.interface';
 import { User } from './../interfaces/user.interface';
 
 @Injectable({
@@ -13,6 +15,8 @@ export class AuthService {
 
   usuario: User;
   token: string;
+  conta: Conta;
+  contaCredito: ContaCredito;
 
   setUsuario(usuario) {
     this.usuario = usuario;
@@ -44,6 +48,41 @@ export class AuthService {
     if (tokenGuardado) {
       this.token = tokenGuardado;
       return this.token;
+    }
+    return null;
+  }
+
+  setConta(conta: Conta){
+    this.conta = conta;
+    localStorage.setItem('conta', JSON.stringify(conta));
+  }
+
+  getConta() {
+    if (this.conta) {
+      return this.conta;
+    }
+    const contaGuardada = localStorage.getItem('conta');
+    if (contaGuardada) {
+      this.conta = JSON.parse(contaGuardada);
+      return this.conta;
+    }
+    return null;
+  }
+
+
+  setContaCredito(conta: ContaCredito){
+    this.conta = conta;
+    localStorage.setItem('contaCredito', JSON.stringify(conta));
+  }
+
+  getContaCredito() {
+    if (this.conta) {
+      return this.conta;
+    }
+    const contaGuardada = localStorage.getItem('contaCredito');
+    if (contaGuardada) {
+      this.conta = JSON.parse(contaGuardada);
+      return this.conta;
     }
     return null;
   }
