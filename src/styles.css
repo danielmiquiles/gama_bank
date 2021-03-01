@@ -46,6 +46,7 @@ input {
     display:block;
     width: 95%;
     border:none;
+    background: none;
     border-bottom:1px solid #757575;
 }
   

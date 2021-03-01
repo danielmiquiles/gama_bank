@@ -16,7 +16,7 @@ export class CreatePlanService {
     private token: AuthService
   ) { }
 
-  createPlans() {
+  createPlans(plan: CreatePlan) {
     const user = this.token.getUsuario();
     let headers = new HttpHeaders({
       'Authotization': this.token.getToken()

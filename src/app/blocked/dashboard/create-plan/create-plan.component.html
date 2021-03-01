@@ -15,23 +15,34 @@
           <span class="bar"></span>
           <p *ngIf="exibeErro('description')" class="form__validation">Descrição inválido</p>
         </div>
+
+        <div class="form__inputs">
+            <label for="loginIput">Usuário</label>
+          <input
+            type="text"
+            name="loginIput"
+            formControlName="description"
+          />
+          <span class="highlight"></span>
+          <span class="bar"></span>
+          <p *ngIf="exibeErro('login')" class="form__validation">Usuário inválido</p>
+        </div>
     
         <div class="form__inputs">
             <label for="tipoMovimentoInput">Tipo de movimento</label>
           <input
             type="text"
             name="tipoMovimentoInput"
-            formControlName="tipoMovimento"
+            formControlName="typeMoviment"
           />
           <span class="highlight"></span>
           <span class="bar"></span>
-          <p *ngIf="exibeErro('tipoMovimento')" class="form__validation">Usuário inválido</p>
+          <p *ngIf="exibeErro('typeMoviment')" class="form__validation">Tipo de movimento inválido</p>
         </div>
     
         <button
           type="submit"
           class="form__button form__button--disabled"
-          [disabled]="planForm.invalid"
         >
           Criar
           <svg
