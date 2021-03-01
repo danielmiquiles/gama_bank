@@ -19,7 +19,7 @@ export class CreatePlanService {
   createPlans(plan: CreatePlan) {
     const user = this.token.getUsuario();
     let headers = new HttpHeaders({
-      'Authotization': this.token.getToken()
+      'Authorization': this.token.getToken()
     });
     let params = new HttpParams().set('login', user.login);
     let httpOptions = {
