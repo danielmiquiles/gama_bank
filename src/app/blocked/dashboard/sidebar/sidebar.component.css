@@ -82,8 +82,10 @@
     }
     
     .navbar__header-logo {
-        width: 55%;
+        width: 43%;
         display: block;
+        padding: 0;
+        margin-top: 10%;
     }
 
     .navbar__items {
