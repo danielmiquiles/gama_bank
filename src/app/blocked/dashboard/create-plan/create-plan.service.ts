@@ -26,6 +26,6 @@ export class CreatePlanService {
       headers: headers,
       params: params
     };
-    return this.http.post<CreatePlan[]>(`${this.API_URL}/lancamentos/plano-conta`, httpOptions);
+    return this.http.post<CreatePlan>(`${this.API_URL}/lancamentos/planos-conta`, plan, httpOptions);
   }
 }

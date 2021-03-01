@@ -34,4 +34,13 @@
     .card {
         width: 59vw;
     }
+
+    .form__footer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .form__button {
+        width: 50%;
+    }
 }

@@ -15,7 +15,7 @@ import { CreatePlanService } from './create-plan.service';
 export class CreatePlanComponent implements OnInit {
 
   planForm: FormGroup;
-  plan: CreatePlan[];
+  plan: CreatePlan;
   isSpinner = false;
   isLoading: boolean;
 
@@ -83,6 +83,7 @@ export class CreatePlanComponent implements OnInit {
   }
 
   onError(error: any) {
-    this.toastr.error('Tente novamente', 'Informações incorretas!')
+    this.toastr.error('Tente novamente', 'Informações incorretas!', error);
+    this.isSpinner = false;
   }
 }
